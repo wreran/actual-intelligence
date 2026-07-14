@@ -1,0 +1,4 @@
+ipykernel
+kagglehub
+kaggle
+pandas
