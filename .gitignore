@@ -1,3 +1,8 @@
 # Virtual environment
 .venv/
+__pycache__/
+
+# Downloaded paper PDFs — large binaries. Provenance is tracked in
+# papers/MANIFEST.md, which is committed; re-fetch with fetch_pdf.py.
+papers/pdf/
 
