@@ -413,10 +413,33 @@ def fit_predict(name, model, X_tr, y_tr, X_va, y_va):
 # ---------------------------------------------------------------------------
 
 def tune(name: str, X: np.ndarray, y: np.ndarray, spw: float, n_trials: int,
-         n_splits: int, n_repeats: int, history: list) -> tuple[dict, float, float]:
+         n_splits: int, n_repeats: int, history: list,
+         subsample: int = 0) -> tuple[dict, float, float]:
+    """Optuna search for one model.
+
+    `subsample` tunes on a stratified subsample rather than the full fit split.
+    Measured cost on this data: XGBoost is ~270s per fit at 20k rows x 5000
+    features, so 12 trials x 5 folds would be ~4.5 hours for that model alone.
+    Hyperparameter *rankings* are far more stable across sample size than the
+    scores themselves, so searching on a subsample and then evaluating the
+    winner on the full data buys most of the benefit at a fraction of the cost.
+
+    Everything reported downstream — OOF, holdout, the blend — is computed on
+    the full data. Only the search itself is subsampled.
+    """
     import optuna
     optuna.logging.set_verbosity(optuna.logging.WARNING)
     build, space, _ = ZOO[name]
+
+    if subsample and subsample < len(y):
+        rng = np.random.default_rng(SEED)
+        idx = np.concatenate([
+            rng.choice(np.flatnonzero(y == c),
+                       size=max(int(round(subsample * (y == c).mean())), 2),
+                       replace=False)
+            for c in np.unique(y)])
+        rng.shuffle(idx)
+        X, y = X[idx], y[idx]
 
     def objective(trial):
         params = space(trial)
@@ -500,6 +523,11 @@ def main() -> int:
                     help="seeds to average for the final fit")
     ap.add_argument("--fast", action="store_true",
                     help="tiny run: 4 trials, 3 folds, 1 repeat, 2 seeds")
+    ap.add_argument("--tune-subsample", type=int, default=8000,
+                    help="tune hyperparameters on a stratified subsample of "
+                         "this many rows (0 = full data). OOF, holdout and the "
+                         "final fit always use full data. Default 8000 keeps a "
+                         "6-model run to ~1-2h instead of ~15h.")
     ap.add_argument("--select", choices=("one-se", "best"), default="one-se",
                     help="'one-se' (default) picks the simplest model within "
                          "one standard error of the best — the right choice "
@@ -510,6 +538,7 @@ def main() -> int:
 
     if args.fast:
         args.trials, args.folds, args.repeats, args.seeds = 4, 3, 1, 2
+        args.tune_subsample = min(args.tune_subsample or 2000, 2000)
 
     out = Path(args.out_dir)
     out.mkdir(parents=True, exist_ok=True)   # playbook: this crashed before
@@ -522,7 +551,8 @@ def main() -> int:
 
     t0 = time.time()
     print(f"[cfg ] models={names} trials={args.trials} "
-          f"folds={args.folds}x{args.repeats} seeds={args.seeds} seed={SEED}")
+          f"folds={args.folds}x{args.repeats} seeds={args.seeds} "
+          f"tune_subsample={args.tune_subsample} select={args.select} seed={SEED}")
 
     # ---- data ----
     if args.synthetic:
@@ -545,7 +575,8 @@ def main() -> int:
         ts = time.time()
         print(f"\n[tune] {name} ...")
         params, cv_biased, fold_sd = tune(name, X_fit, y_fit, spw, args.trials,
-                                          args.folds, args.repeats, history)
+                                          args.folds, args.repeats, history,
+                                          subsample=args.tune_subsample)
         oof[name] = oof_predict(name, params, X_fit, y_fit, spw, args.folds)
         thr, oof_f1 = best_threshold(y_fit, oof[name])
 
