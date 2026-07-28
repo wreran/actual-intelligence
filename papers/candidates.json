@@ -1,0 +1,3015 @@
+{
+  "generated": "2026-07-28",
+  "window_start": "2025-01-27",
+  "window_months": 18,
+  "preset": "project",
+  "queries": [
+    "XGBoost text classification",
+    "gradient boosting machine-generated text detection",
+    "XGBoost imbalanced classification macro F1",
+    "gradient boosting hyperparameter optimization overfitting",
+    "XGBoost calibration tabular",
+    "LightGBM CatBoost benchmark tabular",
+    "gradient boosted trees feature selection text"
+  ],
+  "papers": [
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4417162425",
+      "title": "Accuracy, precision, recall, f1-score, or MCC? empirical evidence from advanced statistics, ML, and XAI for evaluating business predictive models",
+      "abstract": "Imbalanced datasets pose a persistent challenge in business data mining, particularly in high-stakes domains such as financial risk prediction and customer churn analysis, where the minority class often carries disproportionate operational and financial consequences. Although widely used evaluation metrics\u2013such as accuracy, precision, recall, F1-score, and Matthews Correlation Coefficient (MCC)\u2013are commonly applied in practice, there remains no empirical consensus on which metric offers the most reliable performance under real-world conditions. Existing studies lack a unified, statistically validated framework that accounts for threshold sensitivity, input noise, and interpretability\u2013factors critical to business decision-making. To address this gap, we present a comprehensive and statistically rigorous evaluation of performance metrics for imbalanced business classification tasks. Using two benchmark datasets with distinct sizes and imbalance ratios\u2013the Default of Credit Card Clients dataset and the Telco Customer Churn dataset\u2013we evaluate five commonly used machine learning models: Logistic Regression (LR), Decision Tree (DT), Random Forest (RF), Extreme Gradient Boosting (XGBoost), and k-Nearest Neighbors (KNN). Our methodology incorporates static and dynamic threshold analysis, Gaussian noise robustness testing, bootstrap confidence intervals, McNemar\u2019s test, Cohen\u2019s kappa, and analysis of variance (ANOVA) to assess the statistical reliability of performance metrics. In addition, we introduce a novel two-stage explainable artificial intelligence (XAI) framework using SHapley Additive exPlanations (SHAP). The first stage employs standard SHAP visualizations (bar and beeswarm plots) to ensure baseline interpretability. The second stage extends this with a novel 3D metric-conditioned SHAP analysis, linking feature contributions to variations in classification thresholds and evaluation metrics. Our findings show that the F1-score consistently provides the most stable and balanced evaluation across datasets and testing conditions, with MCC offering complementary diagnostic value. In contrast, accuracy and precision demonstrate limited robustness under class imbalance. By combining statistical rigor with interpretable AI, this study offers the most comprehensive guidance to date for selecting performance metrics in imbalanced business classification, with practical implications for model deployment in finance, marketing, and customer analytics.",
+      "date": "2025-12-09",
+      "year": 2025,
+      "doi": "10.1186/s40537-025-01313-4",
+      "arxiv_id": "",
+      "venue": "Journal Of Big Data",
+      "type": "article",
+      "citations": 51,
+      "fwci": 64.4864,
+      "percentile": 0.99918401,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://link.springer.com/content/pdf/10.1186/s40537-025-01313-4.pdf",
+      "landing_url": "https://doi.org/10.1186/s40537-025-01313-4",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 61,
+      "authors": [
+        "Khaled Mahmud Sujon",
+        "Rohayanti Hassan",
+        "Kwonhue Choi",
+        "Md Abdus Samad"
+      ],
+      "scoring": {
+        "final_score": 0.5781,
+        "impact_score": 0.7115,
+        "relevance": 0.75,
+        "topic_points": 7.5,
+        "age_months": 7.6,
+        "citations_per_month": 6.72,
+        "components": {
+          "velocity": 1.0,
+          "citations": 0.745,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "shap",
+          "interpretab",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4409812935",
+      "title": "Big Data-Driven Distributed Machine Learning for Scalable Credit Card Fraud Detection Using PySpark, XGBoost, and CatBoost",
+      "abstract": "This study presents an optimization for a distributed machine learning framework to achieve credit card fraud detection scalability. Due to the growth in fraudulent activities, this research implements the PySpark-based processing of large-scale transaction datasets, integrating advanced machine learning models: Logistic Regression, Decision Trees, Random Forests, XGBoost, and CatBoost. These have been evaluated in terms of scalability, accuracy, and handling imbalanced datasets. Key findings: Among the most promising models for complex and imbalanced data, XGBoost and CatBoost promise close-to-ideal accuracy rates in fraudulent transaction detection. PySpark will be instrumental in scaling these systems to enable them to perform distributed processing, real-time analysis, and adaptive learning. This study further discusses challenges like overfitting, data access, and real-time implementation with potential solutions such as ensemble methods, intelligent sampling, and graph-based approaches. Future directions are underlined by deploying these frameworks in live transaction environments, leveraging continuous learning mechanisms, and integrating advanced anomaly detection techniques to handle evolving fraud patterns. The present research demonstrates the importance of distributed machine learning frameworks for developing robust, scalable, and efficient fraud detection systems, considering their significant impact on financial security and the overall financial ecosystem.",
+      "date": "2025-04-25",
+      "year": 2025,
+      "doi": "10.3390/electronics14091754",
+      "arxiv_id": "",
+      "venue": "Electronics",
+      "type": "article",
+      "citations": 33,
+      "fwci": 41.9083,
+      "percentile": 0.99797875,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.mdpi.com/2079-9292/14/9/1754/pdf?version=1745574590",
+      "landing_url": "https://doi.org/10.3390/electronics14091754",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 133,
+      "authors": [
+        "Leonidas Theodorakopoulos",
+        "Alexandra Theodoropoulou",
+        "Anastasios Tsimakis",
+        "Constantinos Halkiopoulos"
+      ],
+      "scoring": {
+        "final_score": 0.4962,
+        "impact_score": 0.6107,
+        "relevance": 0.75,
+        "topic_points": 6.0,
+        "age_months": 15.1,
+        "citations_per_month": 2.19,
+        "components": {
+          "velocity": 0.748,
+          "citations": 0.665,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "overfit",
+          "ensemble"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": true
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4415781954",
+      "title": "CatBoost-enhanced convolutional neural network framework with explainable artificial intelligence for smart-grid stability forecasting",
+      "abstract": "Introduction Mobile robots increasingly support inspection and emergency response in smart-grid infrastructure but require accurate, interpretable backend diagnostics. This work is proposing a hybrid model that integrates CatBoost (for tabular features) with a deep 1D-CNN (for spatial feature extraction) and integrates Local Interpretable Model-agnostic Explanations (LIME) to provide transparent, instance-level rationales. Methods We evaluate on a synthetic DSGC-based stability dataset (14 features) and externally on the IEEE PES 2018 fault-clearing corpus. The hybrid concatenates CatBoost output probabilities with a three-layer CNN feature vector, followed by dense layers (ReLU and Sigmoid). Models are trained using the Adam optimizer. Performance is reported via Accuracy, Precision, Recall, F1, confusion matrices, ROC-AUC, and LIME explanations. Results On the generated synthetic data, the hybrid achieved 98.23% accuracy (F1 = 97.56%), outperforming ANN, DNN and CNN baselines. External validation on IEEE PES 2018 yielded F1 = 97.6%. Discussion Combining gradient-boosted trees with deep convolutional features improves discrimination while and it is preserving local explainability. This way it can be supporting both grid operations and stability-aware robotic mission planning. Future work will extend to multiclass/regression settings and compare XAI methods (e.g., SHAP) alongside additional tabular learners (XGBoost/LightGBM).",
+      "date": "2025-11-03",
+      "year": 2025,
+      "doi": "10.3389/frsgr.2025.1617763",
+      "arxiv_id": "",
+      "venue": "Frontiers in Smart Grids",
+      "type": "article",
+      "citations": 17,
+      "fwci": 8.7638,
+      "percentile": 0.98421922,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://public-pages-files-2025.frontiersin.org/journals/smart-grids/articles/10.3389/frsgr.2025.1617763/pdf",
+      "landing_url": "https://doi.org/10.3389/frsgr.2025.1617763",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 21,
+      "authors": [
+        "Stephanie Ness"
+      ],
+      "scoring": {
+        "final_score": 0.4834,
+        "impact_score": 0.5687,
+        "relevance": 0.8,
+        "topic_points": 6.5,
+        "age_months": 8.8,
+        "citations_per_month": 1.94,
+        "components": {
+          "velocity": 0.713,
+          "citations": 0.545,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "corpus",
+          "tabular",
+          "shap",
+          "interpretab",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "convolutional",
+          "neural network"
+        ],
+        "family_in_title": true
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4407749593",
+      "title": "Improving Surgical Site Infection Prediction Using Machine Learning: Addressing Challenges of Highly Imbalanced Data",
+      "abstract": "Background: Surgical site infections (SSIs) lead to higher hospital readmission rates and healthcare costs, representing a significant global healthcare burden. Machine learning (ML) has demonstrated potential in predicting SSIs; however, the challenge of addressing imbalanced class ratios remains. Objectives: The aim of this study is to evaluate and enhance the predictive capabilities of machine learning models for SSIs by assessing the effects of feature selection, resampling techniques, and hyperparameter optimization. Methods: Using routine SSI surveillance data from multiple hospitals in Saudi Arabia, we analyzed a dataset of 64,793 surgical patients, of whom 1632 developed SSI. Seven machine learning algorithms were created and tested: Decision Tree (DT), Gaussian Naive Bayes (GNB), Support Vector Machine (SVM), Logistic Regression (LR), Random Forest (RF), Stochastic Gradient Boosting (SGB), and K-Nearest Neighbors (KNN). We also improved several resampling strategies, such as undersampling and oversampling. Grid search five-fold cross-validation was employed for comprehensive hyperparameter optimization, in conjunction with balanced sampling techniques. Features were selected using a filter method based on their relationships with the target variable. Results: Our findings revealed that RF achieves the highest performance, with an MCC of 0.72. The synthetic minority oversampling technique (SMOTE) is the best-performing resampling technique, consistently enhancing the performance of most machine learning models, except for LR and GNB. LR struggles with class imbalance due to its linear assumptions and bias toward the majority class, while GNB\u2019s reliance on feature independence and Gaussian distribution make it unreliable for under-represented minority classes. For computational efficiency, the Instance Hardness Threshold (IHT) offers a viable alternative undersampling technique, though it may compromise performance to some extent. Conclusions: This study underscores the potential of ML models as effective tools for assessing SSI risk, warranting further clinical exploration to improve patient outcomes. By employing advanced ML techniques and robust validation methods, these models demonstrate promising accuracy and reliability in predicting SSI events, even in the face of significant class imbalances. In addition, using MCC in this study ensures a more reliable and robust evaluation of the model\u2019s predictive performance, particularly in the presence of an imbalanced dataset, where other metrics may fail to provide an accurate evaluation.",
+      "date": "2025-02-19",
+      "year": 2025,
+      "doi": "10.3390/diagnostics15040501",
+      "arxiv_id": "",
+      "venue": "Diagnostics",
+      "type": "article",
+      "citations": 9,
+      "fwci": 11.4295,
+      "percentile": 0.98085778,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2075-4418/15/4/501/pdf?version=1740013750",
+      "landing_url": "https://doi.org/10.3390/diagnostics15040501",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 49,
+      "authors": [
+        "Salha Al-Ahmari",
+        "Farrukh Nadeem"
+      ],
+      "scoring": {
+        "final_score": 0.4313,
+        "impact_score": 0.4313,
+        "relevance": 1.0,
+        "topic_points": 10.5,
+        "age_months": 17.2,
+        "citations_per_month": 0.52,
+        "components": {
+          "velocity": 0.371,
+          "citations": 0.434,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "hyperparameter optimization",
+          "feature selection",
+          "cross-validation",
+          "grid search"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4417123591",
+      "title": "Optimized ANN\u2013RF hybrid model with optuna for fault detection and classification in power transmission systems",
+      "abstract": "This study proposes a hybrid machine learning approach that integrates Artificial Neural Networks (ANN) and Random Forest (RF) classifiers, enhanced by Optuna hyperparameter optimization, for fault detection and classification in power transmission networks. The model is trained on a synthetic dataset generated from MATLAB/Simulink simulations of an 11 kV multi-generator system, incorporating three-phase current (Ia, Ib, Ic) and voltage (Va, Vb, Vc) signals under fault scenarios such as line-to-ground (LG), double line-to-ground (LLG), and three-phase symmetrical (LLLG) faults. To address class imbalance, the Synthetic Minority Oversampling Technique (SMOTE) is applied, ensuring balanced representation of rare fault categories. The ANN-RF model achieves superior performance, with 99.8% accuracy, 99.5% precision, and 99.4% recall, consistently outperforming traditional classifiers including K-Nearest Neighbors, Bagging, AdaBoost, and Gradient Boosting. Its effectiveness arises from ANN's non-linear feature extraction, RF's ensemble robustness, and Optuna's hyperparameter tuning, with SMOTE improving detection of rare fault types. Compared with advanced models such as Modified InceptionV3 (98.93% accuracy) and Extreme Learning Machines (99.60% accuracy), the proposed approach provides a balanced trade-off between sensitivity and specificity, offering a reliable solution for fault identification. Nonetheless, challenges in computational efficiency and reliance on simulated data highlight the need for validation with real-world measurements and further optimization for real-time smart grid applications.",
+      "date": "2025-12-08",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-31008-y",
+      "arxiv_id": "",
+      "venue": "Scientific Reports",
+      "type": "article",
+      "citations": 34,
+      "fwci": 17.5276,
+      "percentile": 0.99622972,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.nature.com/articles/s41598-025-31008-y_reference.pdf",
+      "landing_url": "https://doi.org/10.1038/s41598-025-31008-y",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 51,
+      "authors": [
+        "Hasan Uzel",
+        "Y\u0131ld\u0131r\u0131m \u00d6Z\u00dcPAK",
+        "Feyyaz Alpsalaz",
+        "Emrah Aslan"
+      ],
+      "scoring": {
+        "final_score": 0.4295,
+        "impact_score": 0.6811,
+        "relevance": 0.5075,
+        "topic_points": 5.07,
+        "age_months": 7.6,
+        "citations_per_month": 4.46,
+        "components": {
+          "velocity": 0.964,
+          "citations": 0.67,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "hyperparameter optimization",
+          "hyperparameter tuning",
+          "optuna",
+          "ensemble"
+        ],
+        "application_domains": [
+          "fault detection"
+        ],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W7108460996",
+      "title": "From Prediction to Prevention: Identifying Actionable Crash Factors Through ML and Narrative-Based Sensitivity Testing",
+      "abstract": "Crashes on roadways continue to represent a major global public health concern due to high rates of death and injury, underscoring the need for predictive tools that can identify high-risk conditions and guide prevention strategies. This study develops a framework that combines structured crash records and road information with unstructured police narratives to predict injury severity using machine learning and natural language processing (NLP). The dataset is used to train, validate, and test nine models, combining three algorithms (Random Forest, AdaBoost, and XGBoost) with two NLP methods (TF-IDF and Word2Vec). Model performance is evaluated using macro-average F1-scores to address severe class imbalance. Results show that XGBoost with TF-IDF achieves the best performance (macro-F1 = 0.644), demonstrating measurable improvements from incorporating narrative features compared to structured data alone. Beyond prediction, a simulation-based sensitivity analysis is conducted on the top 100 features, identifying 11 variables with the greatest impact on severity outcomes in Kentucky. Seatbelt non-use, occupant entrapment, and impaired driver control emerge as the most influential factors, with simulated improvements leading to notable reductions in fatalities and major injuries. The study introduces a \u201cprediction-to-prevention\u201d framework that links injury severity prediction with simulation-based sensitivity analysis. By integrating structured and narrative crash data, the framework identifies how changes in key behavioral and roadway factors can shift injury outcomes toward less severe levels. These findings highlight the dual contribution of this study: improving predictive accuracy through narrative integration and offering actionable insights to support evidence-based traffic safety interventions.",
+      "date": "2025-12-04",
+      "year": 2025,
+      "doi": "10.3390/futuretransp5040190",
+      "arxiv_id": "",
+      "venue": "Future Transportation",
+      "type": "article",
+      "citations": 5,
+      "fwci": 3.2289,
+      "percentile": 0.922474,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2673-7590/5/4/190/pdf",
+      "landing_url": "https://doi.org/10.3390/futuretransp5040190",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 40,
+      "authors": [
+        "Mohammad Zana Majidi",
+        "Teng Wang",
+        "Reginald Souleyrette"
+      ],
+      "scoring": {
+        "final_score": 0.4221,
+        "impact_score": 0.4221,
+        "relevance": 1.0,
+        "topic_points": 15.5,
+        "age_months": 7.8,
+        "citations_per_month": 0.64,
+        "components": {
+          "velocity": 0.419,
+          "citations": 0.338,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "natural language",
+          "nlp",
+          "tf-idf",
+          "macro-f1",
+          "imbalanc",
+          "class imbalance"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4410521619",
+      "title": "A PSO weighted ensemble framework with SMOTE balancing for student dropout prediction in smart education systems",
+      "abstract": "Student dropout is a critical issue that affects not only educational institutions but also students' mental well-being, career prospects, and long-term quality of life. The ability to predict dropout rates accurately enables timely interventions that can support students' academic success and psychological resilience. However, the imbalanced nature of student dropout datasets often results in biased and less effective predictive models. To address this, we propose a Particle Swarm Optimization (PSO)-Weighted Ensemble Framework integrated with the Synthetic Minority Oversampling Technique (SMOTE). This methodology balances the dataset using SMOTE, optimizes model hyperparameters, and fine-tunes ensemble weights through PSO to improve predictive performance. The framework achieves 86% accuracy, an AUC score of 0.9593, and enhanced dropout class metrics, including an F1-Score of 0.8633, precision of 0.8633, and recall of 0.86. Compared to Ant Colony Optimization (ACO) and Firefly algorithms, which achieve accuracies of 83% and 85% respectively, our approach demonstrates up to a 3% improvement in key performance metrics. Additionally, in comparison to individual baseline models used in ensemble model Random Forest (RF) with SMOTE (83.5% accuracy, 0.95 AUC) and XGBoost (XGB) with SMOTE (82.7% accuracy, 0.95 AUC), the proposed framework significantly enhances predictive reliability. Furthermore, PSO offers computational efficiency advantages over Firefly and Ant Colony Optimization, reducing hyperparameter tuning time while improving ensemble performance. The proposed framework is scalable and adaptable for real-world applications, particularly in educational institutions, where it can aid in early intervention strategies to mitigate dropout rates.",
+      "date": "2025-05-20",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-97506-1",
+      "arxiv_id": "",
+      "venue": "Scientific Reports",
+      "type": "article",
+      "citations": 25,
+      "fwci": 22.8535,
+      "percentile": 0.99297546,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.nature.com/articles/s41598-025-97506-1.pdf",
+      "landing_url": "https://doi.org/10.1038/s41598-025-97506-1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 31,
+      "authors": [
+        "Achin Jain",
+        "Arun Kumar Dubey",
+        "Shakir Khan",
+        "Arvind Panwar",
+        "Mohammad Alkhatib",
+        "Abdulaziz M Alshahrani"
+      ],
+      "scoring": {
+        "final_score": 0.404,
+        "impact_score": 0.5771,
+        "relevance": 0.6,
+        "topic_points": 6.0,
+        "age_months": 14.3,
+        "citations_per_month": 1.75,
+        "components": {
+          "velocity": 0.684,
+          "citations": 0.614,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "hyperparameter tuning",
+          "ensemble"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "fine-tun"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4412039864",
+      "title": "Mitigating Algorithmic Bias Through Probability Calibration: A Case Study on Lead Generation Data",
+      "abstract": "Probability calibration is commonly utilized to enhance the reliability and interpretability of probabilistic classifiers, yet its potential for reducing algorithmic bias remains under-explored. In this study, the role of probability calibration techniques in mitigating bias associated with sensitive attributes, specifically country of origin, within binary classification models is investigated. Using a real-world lead-generation 2853 \u00d7 8 matrix dataset characterized by substantial class imbalance, with the positive class representing 1.4% of observations, several binary classification models were evaluated and the best-performing model was selected as the baseline for further analysis. The evaluated models included Binary Logistic Regression with polynomial degrees of 1, 2, 3, and 4, Random Forest, and XGBoost classification algorithms. Three widely used calibration methods, Platt scaling, isotonic regression, and temperature scaling, were then used to assess their impact on both probabilistic accuracy and fairness metrics of the best-performing model. The findings suggest that post hoc calibration can effectively reduce the influence of sensitive features on predictions by improving fairness without compromising overall classification performance. This study demonstrates the practical value of incorporating calibration as a straightforward and effective fairness intervention within machine learning workflows.",
+      "date": "2025-07-03",
+      "year": 2025,
+      "doi": "10.3390/math13132183",
+      "arxiv_id": "",
+      "venue": "Mathematics",
+      "type": "article",
+      "citations": 9,
+      "fwci": 11.3799,
+      "percentile": 0.98211091,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2227-7390/13/13/2183/pdf?version=1751558508",
+      "landing_url": "https://doi.org/10.3390/math13132183",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 49,
+      "authors": [
+        "Miroslav Nikoli\u0107",
+        "Danilo Nikoli\u0107",
+        "Miroslav Stefanovi\u0107",
+        "Sara Koprivica",
+        "Darko Stefanovi\u0107"
+      ],
+      "scoring": {
+        "final_score": 0.4022,
+        "impact_score": 0.4532,
+        "relevance": 0.85,
+        "topic_points": 8.5,
+        "age_months": 12.8,
+        "citations_per_month": 0.7,
+        "components": {
+          "velocity": 0.439,
+          "citations": 0.434,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "calibrat",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4407285947",
+      "title": "Predicting seawater intrusion wedge length in coastal aquifers using hybrid gradient boosting techniques",
+      "abstract": "Abstract Controlling seawater intrusion (SWI) into freshwater aquifers is crucial for preserving water quality in coastal groundwater management. This research evaluates the performance of three machine learning (ML) models: eXtreme Gradient Boosting (BO-XGB), Light Gradient Boosting Machine (BO-LGB), and Categorical Gradient Boosting (BO-CGB) in predicting the SWI wedge length. A database of 345 numerical simulations was compiled from previous research, and Bayesian Optimization (BO) with fivefold cross-validation was used to fine-tune the models. The inputs included abstraction well distance ( X a ), abstraction well depth ( Y a ), recharge well distance ( X r ), recharge well depth ( Y r ), abstraction rate ( Q a ), artificial recharge rate ( Q r ), and SWI wedge length ( L ). Results show that BO-CGB consistently achieved the best performance, with high R 2 values (0.996 in training and 0.969 in testing) and low RMSE values (0.439 m in training and 1.327 m in testing). SHapley Additive exPlanations (SHAP) analysis highlighted that Q a and Q r had the most significant impact on SWI wedge length predictions, followed by X a and Y a . Partial Dependence Plot (PDP) analysis revealed a strong negative correlation between flow variables Q a and Q r and wedge length, while X r displayed a more complex, non-linear pattern. BO-CGB emerged as the most reliable model for predicting SWI wedge length. To facilitate practical application, an interactive Graphical User Interface (GUI) was developed, enabling users to input variables and receive instant predictions, enhancing the practical usability of the ML models in managing SWI in coastal aquifers.",
+      "date": "2025-02-09",
+      "year": 2025,
+      "doi": "10.1007/s12145-025-01755-7",
+      "arxiv_id": "",
+      "venue": "Earth Science Informatics",
+      "type": "article",
+      "citations": 28,
+      "fwci": 15.1165,
+      "percentile": 0.99568395,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s12145-025-01755-7.pdf",
+      "landing_url": "https://doi.org/10.1007/s12145-025-01755-7",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 45,
+      "authors": [
+        "Mohamed Kamel Elshaarawy",
+        "Asaad M. Armanuos"
+      ],
+      "scoring": {
+        "final_score": 0.4017,
+        "impact_score": 0.5738,
+        "relevance": 0.6,
+        "topic_points": 4.5,
+        "age_months": 17.5,
+        "citations_per_month": 1.6,
+        "components": {
+          "velocity": 0.657,
+          "citations": 0.635,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "bayesian optimization",
+          "shap",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "fine-tun"
+        ],
+        "family_in_title": true
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4409444883",
+      "title": "Machine learning with hyperparameter optimization applied in facies-supported permeability modeling in carbonate oil reservoirs",
+      "abstract": "Most carbonate reservoirs exhibit heterogeneous pore distribution, whereby the matrix displays low permeability, thus impeding the flow of oil. On the other hand, highly permeable fractures function as the main flow conduits within such reservoirs. Permeability measurements are obtained from core and well test analysis, which are too expensive and not available for many wells. Therefore, accurate permeability prediction is a vital step in developing an efficient field development plan, as it plays a pivotal role in the accurate distribution of 3D petrophysical properties throughout a reservoir. Machine learning (ML) algorithms are now widely applied to predict core permeability using conventional well logs to build a model for permeability prediction in uncored wells. This review considers the performance of six ML algorithms (LightGBM, CATBoost, XGBoost, Adaboost, random forest and gradient boosting) for permeability prediction from a high-quality dataset. The dataset incorporates multiple well-log inputs (gamma ray, caliper, density, neutron porosity, shallow and deep resistivity, total porosity, spontaneous potential, water saturation, depth, and facies) in addition to direct core permeability and porosity measurements. Data pre-processing techniques applied include missing data imputation, scale correction, normalization with three different transformations (log, Box-Cox, and NST) and outlier detection. To enhance the ML performance, two search algorithms (random search and Bayesian optimization) are compared in their ability to tune the ML hyperparameters. There is a need to identify a suitable parameter space, especially when the target variable range is changing. ML performance was evaluated with four evaluation metrics (RMSE, MAE, R 2 , and Adjusted R 2 ). Results showed that the XGBoost algorithm with configuration of (RS as search algorithm, Box Cox as the normalization method, Z-score for outlier detection, without scale correction, old parameter space) delivered the best prediction performance for permeability with RMSE values of 6.9 md and 9.78 md for training and testing, respectively.",
+      "date": "2025-04-15",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-95490-0",
+      "arxiv_id": "",
+      "venue": "Scientific Reports",
+      "type": "article",
+      "citations": 25,
+      "fwci": 11.16,
+      "percentile": 0.99373369,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.nature.com/articles/s41598-025-95490-0.pdf",
+      "landing_url": "https://doi.org/10.1038/s41598-025-95490-0",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 50,
+      "authors": [
+        "Watheq J. Al\u2010Mudhafar",
+        "Alqassim A. Hasan",
+        "Mohammed A. Abbas",
+        "David A. Wood"
+      ],
+      "scoring": {
+        "final_score": 0.3563,
+        "impact_score": 0.5701,
+        "relevance": 0.5,
+        "topic_points": 5.0,
+        "age_months": 15.4,
+        "citations_per_month": 1.62,
+        "components": {
+          "velocity": 0.661,
+          "citations": 0.614,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "hyperparameter optimization",
+          "bayesian optimization"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4416333201",
+      "title": "Machine learning-based prediction of household sanitation facility access in Sub-Saharan Africa: insights from DHS data (2012\u20132024)",
+      "abstract": "BACKGROUND: Access to adequate sanitation facilities remains a major global public health challenge, with an estimated 3.6 billion people lacking safely managed sanitation. Most of these populations reside in low- and middle-income countries, particularly in sub-Saharan Africa (SSA). Sanitation utilization is influenced by socioeconomic, demographic, housing, and environmental factors, contributing to the burden of fecal\u2013orally transmitted diseases. This study aimed to predict household sanitation facility access in SSA using machine learning techniques. METHODS: Data were obtained from Demographic and Health Surveys (DHS) conducted between 2012 and 2024 across 34 SSA countries, comprising 500,845 households. A stratified two-stage cluster sampling design ensured national representativeness. Five supervised machine learning models, Random Forest (RF), Decision Tree (DT), Extreme Gradient Boosting (XGBoost), Logistic Regression (LR), and Artificial Neural Network (ANN) were developed. The dataset was split into training (80%) and testing (20%) subsets. To address class imbalance, the Synthetic Minority Oversampling Technique (SMOTE) was applied, followed by 10-fold cross-validation. Model performance was evaluated using accuracy, precision, recall, F1-score, and AUC-ROC. Feature importance was interpreted using Shapley Additive Explanations (SHAP). RESULTS: The prevalence of unimproved sanitation facility access was 49.85%, with substantial disparities observed within and across countries. The Random Forest model demonstrated the best predictive performance (accuracy = 80.61%, F1-score = 0.8377), outperforming other algorithms. SHAP analysis identified shared toilet (feature importance = 0.233), education level (0.204), and wealth index (0.094) as the most influential predictors, followed by residence, electricity access, age of the household head, drinking water source, household water treatment, and cooking fuel type. Media access, sex of the household head, handwashing facility, water access, soap presence, location of water source, marital status, and household size also contributed notably. The number of under-five children had minimal predictive influence. CONCLUSION: Machine learning models, particularly Random Forest, effectively predicted sanitation facility access in sub-Saharan Africa, highlighting key socioeconomic and infrastructural determinants. Targeted interventions such as economic empowerment, health education, infrastructure investment, and media engagement are essential to reduce reliance on unimproved sanitation and accelerate progress toward the Sustainable Development Goals.",
+      "date": "2025-11-18",
+      "year": 2025,
+      "doi": "10.1186/s13690-025-01780-4",
+      "arxiv_id": "",
+      "venue": "Archives of Public Health",
+      "type": "article",
+      "citations": 6,
+      "fwci": 3.8524,
+      "percentile": 0.93834591,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://archpublichealth.biomedcentral.com/counter/pdf/10.1186/s13690-025-01780-4",
+      "landing_url": "https://doi.org/10.1186/s13690-025-01780-4",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 83,
+      "authors": [
+        "Gelila Yitageasu",
+        "Eyob Akalewold Alemu",
+        "Eshetu Abera Worede",
+        "Mitkie Tigabie",
+        "Lidetu Demoze"
+      ],
+      "scoring": {
+        "final_score": 0.3562,
+        "impact_score": 0.4385,
+        "relevance": 0.75,
+        "topic_points": 7.5,
+        "age_months": 8.3,
+        "citations_per_month": 0.72,
+        "components": {
+          "velocity": 0.447,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "shap",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4411451565",
+      "title": "Cost-Optimised Machine Learning Model Comparison for Predictive Maintenance",
+      "abstract": "Predictive maintenance is essential for reducing industrial downtime and costs, yet real-world datasets frequently encounter class imbalance and require cost-sensitive evaluation due to costly misclassification errors. This study utilises the SCANIA Component X dataset to advance predictive maintenance through machine learning, employing seven supervised algorithms, Support Vector Machine, Random Forest, Decision Tree, K-Nearest Neighbours, Multi-Layer Perceptron, XGBoost, and LightGBM, trained on time-series features extracted via a sliding window approach. A bespoke cost-sensitive metric, aligned with SCANIA\u2019s misclassification cost matrix, assesses model performance. Three imbalance mitigation strategies, downsampling, downsampling with SMOTETomek, and manual class weighting, were explored, with downsampling proving most effective. Random Forest and Support Vector Machine models achieved high accuracy and low misclassification costs, whilst a voting ensemble further enhanced cost efficiency. This research emphasises the critical role of cost-aware evaluation and imbalance handling, proposing an ensemble-based framework to improve predictive maintenance in industrial applications",
+      "date": "2025-06-19",
+      "year": 2025,
+      "doi": "10.3390/electronics14122497",
+      "arxiv_id": "",
+      "venue": "Electronics",
+      "type": "article",
+      "citations": 8,
+      "fwci": 15.1863,
+      "percentile": 0.98702032,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2079-9292/14/12/2497/pdf?version=1750337008",
+      "landing_url": "https://doi.org/10.3390/electronics14122497",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 40,
+      "authors": [
+        "Yating Yang",
+        "Muhammad Zahid Iqbal"
+      ],
+      "scoring": {
+        "final_score": 0.3547,
+        "impact_score": 0.4365,
+        "relevance": 0.75,
+        "topic_points": 7.5,
+        "age_months": 13.3,
+        "citations_per_month": 0.6,
+        "components": {
+          "velocity": 0.403,
+          "citations": 0.414,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "ensemble",
+          "class weight"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4410475401",
+      "title": "Fraudulent Transaction Detection in Online Systems Using Random Forest and Gradient Boosting",
+      "abstract": "The rapid increase in online transactions has significantly raised the risk of fraudulent activities, leading to substantial financial losses. Traditional fraud detection methods often struggle to address the complexity and scale of modern digital fraud. This paper explores the application of machine learning techniques, specifically Random Forest and Gradient Boosting, to detect fraudulent transactions. Both algorithms are widely recognized for their ability to handle large, complex datasets and improve predictive accuracy. The study examines how these techniques work, with Random Forest focusing on ensemble learning and feature importance, and Gradient Boosting employing an iterative, stage-wise approach to correct errors from previous models. Key challenges in fraud detection, including class imbalance, data scarcity, the evolving nature of fraud, and high-dimensional data, are discussed in depth. The paper reviews relevant studies that have utilized machine learning for fraud detection in various contexts, including e-commerce and credit card fraud, highlighting the strengths and limitations of different approaches. It also examines strategies to mitigate challenges, such as resampling techniques and continuous learning. The findings emphasize that while machine learning offers significant improvements in fraud detection, continuous adaptation is essential to keep pace with evolving fraud tactics. By providing a comprehensive overview of machine learning in fraud detection, this research contributes valuable insights into enhancing security measures for digital transactions and financial systems.",
+      "date": "2025-03-01",
+      "year": 2025,
+      "doi": "10.63913/jcl.v1i1.16",
+      "arxiv_id": "",
+      "venue": "Journal of Cyber Law",
+      "type": "article",
+      "citations": 6,
+      "fwci": 7.7924,
+      "percentile": 0.9688577,
+      "cited_by_pct_year": 98,
+      "pdf_url": "https://jcl.mbicore.com/index.php/jcl/article/download/16/5",
+      "landing_url": "https://doi.org/10.63913/jcl.v1i1.16",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Satrya Fajri Pratama"
+      ],
+      "scoring": {
+        "final_score": 0.3302,
+        "impact_score": 0.3885,
+        "relevance": 0.8,
+        "topic_points": 6.5,
+        "age_months": 16.9,
+        "citations_per_month": 0.36,
+        "components": {
+          "velocity": 0.29,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "ensemble"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": true
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414749338",
+      "title": "Personalized Smart Home Automation Using Machine Learning: Predicting User Activities",
+      "abstract": "A personalized framework for smart home automation is introduced, utilizing machine learning to predict user activities and allow for the context-aware control of living spaces. Predicting user activities, such as 'Watch_TV', 'Sleep', 'Work_On_Computer', and 'Cook_Dinner', is essential for improving occupant comfort, optimizing energy consumption, and offering proactive support in smart home settings. The Edge Light Human Activity Recognition Predictor, or EL-HARP, is the main prediction model used in this framework to predict user behavior. The system combines open-source software for real-time sensing, facial recognition, and appliance control with affordable hardware, including the Raspberry Pi 5, ESP32-CAM, Tuya smart switches, NFC (Near Field Communication), and ultrasonic sensors. In order to predict daily user activities, three gradient-boosting models-XGBoost, CatBoost, and LightGBM (Gradient Boosting Models)-are trained for each household using engineered features and past behaviour patterns. Using extended temporal features, LightGBM in particular achieves strong predictive performance within EL-HARP. The framework is optimized for edge deployment with efficient training, regularization, and class imbalance handling. A fully functional prototype demonstrates real-time performance and adaptability to individual behavior patterns. This work contributes a scalable, privacy-preserving, and user-centric approach to intelligent home automation.",
+      "date": "2025-10-02",
+      "year": 2025,
+      "doi": "10.3390/s25196082",
+      "arxiv_id": "",
+      "venue": "Sensors",
+      "type": "article",
+      "citations": 5,
+      "fwci": 1.5965,
+      "percentile": 0.83948995,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/1424-8220/25/19/6082/pdf?version=1759400387",
+      "landing_url": "https://doi.org/10.3390/s25196082",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 27,
+      "authors": [
+        "Mohamed Z. Gad",
+        "Walaa Gad",
+        "Tamer Abdelkader",
+        "Kshirasagar Naik"
+      ],
+      "scoring": {
+        "final_score": 0.3289,
+        "impact_score": 0.4048,
+        "relevance": 0.75,
+        "topic_points": 7.5,
+        "age_months": 9.8,
+        "citations_per_month": 0.51,
+        "components": {
+          "velocity": 0.365,
+          "citations": 0.338,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "regulariz"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414192642",
+      "title": "Unlocking visitor experiences in cultural heritage sites with SHAP-interpretable AI and social media sentiment analysis",
+      "abstract": "This study proposes an AI-driven framework to assess visitor perceptions in historic urban areas using social media data. Unlike traditional models (e.g., XGBoost), our cascaded Aspect-Based Sentiment Analysis (ABSA) with BO-DXGBoost significantly improves prediction accuracy and interpretability. The two-stage system first classifies aspects (service quality) and then analyzes sentiment polarity and intensity, addressing class imbalance via ADASYN and RF-SMOTE. SHAP analysis visualizes feature impacts, while finer-grained interpretability is achieved by decomposing \u201cspatial satisfaction\u201d into 26 secondary indicators, surpassing existing coarse-grained approaches. This framework offers nuanced, data-driven insights into visitor satisfaction, supporting sustainable cultural heritage management and adaptive urban planning. By leveraging social media sentiment, it bridges the gap between big data analytics and heritage studies, enabling scalable, practical monitoring of visitor experiences in complex historic contexts.",
+      "date": "2025-09-15",
+      "year": 2025,
+      "doi": "10.1038/s40494-025-02014-0",
+      "arxiv_id": "",
+      "venue": "npj Heritage Science",
+      "type": "article",
+      "citations": 6,
+      "fwci": 14.4146,
+      "percentile": 0.98779103,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.nature.com/articles/s40494-025-02014-0.pdf",
+      "landing_url": "https://doi.org/10.1038/s40494-025-02014-0",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 43,
+      "authors": [
+        "Wei Chen",
+        "Kai Zhou",
+        "Hu Bin",
+        "Yujie Yang",
+        "Yaru Xu",
+        "Deji Zhuoma",
+        "Ruisi Zhu",
+        "Yu Yang"
+      ],
+      "scoring": {
+        "final_score": 0.3265,
+        "impact_score": 0.4213,
+        "relevance": 0.7,
+        "topic_points": 7.0,
+        "age_months": 10.4,
+        "citations_per_month": 0.58,
+        "components": {
+          "velocity": 0.393,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "shap",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4410000335",
+      "title": "Multimodal Visualization and Explainable Machine Learning\u2013Driven Markers Enable Early Identification and Prognosis Prediction for Symptomatic Aortic Stenosis and Heart Failure With Preserved Ejection Fraction After Transcatheter Aortic Valve Replacement: Multicenter Cohort Study",
+      "abstract": "BACKGROUND: Currently, there is a paucity of literature addressing personalized risk stratification using multimodal data in patients with symptomatic aortic stenosis and heart failure with preserved ejection fraction (HFpEF) following transcatheter aortic valve replacement (TAVR). OBJECTIVE: This study aimed to enhance the performance of risk assessment models in this patient population by developing a predictive model for adverse outcomes using various machine learning (ML) techniques. METHODS: This multicenter cohort study included 326 patients diagnosed with severe AS and HFpEF who underwent TAVR between January 2017 and December 2023. Patients were allocated to training (n=195) and independent validation (n=131) sets based on hospital affiliation. A dual-phase feature selection process, combining least absolute shrinkage and selection operator logistic regression and the Boruta algorithm, was used to identify relevant variables from the multimodal dataset. A total of 5 ML model-decision trees, K-nearest neighbors, random forest, support vector machine, and extreme gradient boosting were used to construct a visualization and explainable predictive framework to elucidate model decision-making processes. RESULTS: The primary features identified included age, N-terminal pro-brain natriuretic peptide, fasting blood glucose, triglyceride/high-density lipoprotein cholesterol ratio, triglyceride glucose index, triglyceride glucose-BMI index, atherogenic index of plasma index, and Apolipoprotein B. Among the 5 models, the support vector machine demonstrated the best predictive performance for major adverse cardiovascular and cerebrovascular events in patients with severe AS and HFpEF following TAVR, achieving an area under the curve of 0.756 (95% CI 0.631-0.881) in the independent validation set. The model exhibited good calibration and robust predictive power in both training and validation sets and demonstrated the highest net benefit in decision curve analysis compared to other models. To extract significant variables influencing the algorithm and ensure model appropriateness, we interpreted cohort and personalized model predictions using Shapley Additive Explanations values. CONCLUSIONS: Our ML-based multimodal model, incorporating 8 readily accessible predictors, demonstrated robust predictive capability for 12 months of major adverse cardiovascular and cerebrovascular events risk. This model can be used to identify high-risk individuals with AS and HFpEF following TAVR, potentially aiding in risk stratification and personalized treatment strategies.",
+      "date": "2025-05-01",
+      "year": 2025,
+      "doi": "10.2196/70587",
+      "arxiv_id": "",
+      "venue": "Journal of Medical Internet Research",
+      "type": "article",
+      "citations": 16,
+      "fwci": 12.7064,
+      "percentile": 0.99033012,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.jmir.org/2025/1/e70587/PDF",
+      "landing_url": "https://doi.org/10.2196/70587",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 31,
+      "authors": [
+        "Jun Wang",
+        "Jiajun Zhu",
+        "Hui Li",
+        "Shouling Wu",
+        "Siyang Li",
+        "Zhuoya Yao",
+        "Tongjian Zhu",
+        "Bi Tang"
+      ],
+      "scoring": {
+        "final_score": 0.3209,
+        "impact_score": 0.5134,
+        "relevance": 0.5,
+        "topic_points": 5.0,
+        "age_months": 14.9,
+        "citations_per_month": 1.08,
+        "components": {
+          "velocity": 0.548,
+          "citations": 0.534,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "shap",
+          "feature selection",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4409729402",
+      "title": "Artificial Intelligence vs. Efficient Markets: A Critical Reassessment of Predictive Models in the Big Data Era",
+      "abstract": "This paper critically examines artificial intelligence applications in stock market forecasting, addressing significant gaps in the existing literature that often overlook the tension between theoretical market efficiency and empirical predictability. While numerous reviews catalog methodologies, they frequently fail to rigorously evaluate model performance across different market regimes or reconcile statistical significance with economic relevance. We analyze techniques ranging from traditional statistical models to advanced deep learning architectures, finding that ensemble methods like Extra Trees, Random Forest, and XGBoost consistently outperform single classifiers, achieving directional accuracy of up to 86% in specific market conditions. Our analysis reveals that hybrid approaches integrating multiple data sources demonstrate superior performance by capturing complementary market signals, yet many models showing statistical significance fail to generate economic value after accounting for transaction costs and market impact. By addressing methodological challenges including backtest overfitting, regime changes, and implementation constraints, we provide a novel comprehensive framework for rigorous model assessment that bridges the divide between academic research and practical implementation. This review makes three key contributions: (1) a reconciliation of the Efficient Market Hypothesis with AI-driven predictability through an adaptive market framework, (2) a multi-dimensional evaluation methodology that extends beyond classification accuracy to financial performance, and (3) an identification of promising research directions in explainable AI, transfer learning, causal modeling, and privacy-preserving techniques that address current limitations.",
+      "date": "2025-04-23",
+      "year": 2025,
+      "doi": "10.3390/electronics14091721",
+      "arxiv_id": "",
+      "venue": "Electronics",
+      "type": "article",
+      "citations": 27,
+      "fwci": 35.4884,
+      "percentile": 0.99794344,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.mdpi.com/2079-9292/14/9/1721/pdf?version=1745418577",
+      "landing_url": "https://doi.org/10.3390/electronics14091721",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 114,
+      "authors": [
+        "A. Pagliaro"
+      ],
+      "scoring": {
+        "final_score": 0.3202,
+        "impact_score": 0.5822,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 15.1,
+        "citations_per_month": 1.78,
+        "components": {
+          "velocity": 0.688,
+          "citations": 0.628,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "ensemble",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "deep learning"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4408363240",
+      "title": "Two-Year Hypertension Incidence Risk Prediction in Populations in the Desert Regions of Northwest China: Prospective Cohort Study",
+      "abstract": "BACKGROUND: Hypertension is a major global health issue and a significant modifiable risk factor for cardiovascular diseases, contributing to a substantial socioeconomic burden due to its high prevalence. In China, particularly among populations living near desert regions, hypertension is even more prevalent due to unique environmental and lifestyle conditions, exacerbating the disease burden in these areas, underscoring the urgent need for effective early detection and intervention strategies. OBJECTIVE: This study aims to develop, calibrate, and prospectively validate a 2-year hypertension risk prediction model by using large-scale health examination data collected from populations residing in 4 regions surrounding the Taklamakan Desert of northwest China. METHODS: We retrospectively analyzed the health examination data of 1,038,170 adults (2019-2021) and prospectively validated our findings in a separate cohort of 961,519 adults (2021-2023). Data included demographics, lifestyle factors, physical examinations, and laboratory measurements. Feature selection was performed using light gradient-boosting machine-based recursive feature elimination with cross-validation and Least Absolute Shrinkage and Selection Operator, yielding 24 key predictors. Multiple machine learning (logistic regression, random forest, extreme gradient boosting, light gradient-boosting machine) and deep learning (Feature Tokenizer + Transformer, SAINT) models were trained with Bayesian hyperparameter optimization. RESULTS: Over a 2-year follow-up, 15.20% (157,766/1,038,170) of the participants in the retrospective cohort and 10.50% (101,077/961,519) in the prospective cohort developed hypertension. Among the models developed, the CatBoost model demonstrated the best performance, achieving area under the curve (AUC) values of 0.888 (95% CI 0.886-0.889) in the retrospective cohort and 0.803 (95% CI 0.801-0.804) in the prospective cohort. Calibration via isotonic regression improved the model's probability estimates, with Brier scores of 0.090 (95% CI 0.089-0.091) and 0.102 (95% CI 0.101-0.103) in the internal validation and prospective cohorts, respectively. Participants were ranked by the positive predictive value calculated using the calibrated model and stratified into 4 risk categories (low, medium, high, and very high), with the very high group exhibiting a 41.08% (5741/13,975) hypertension incidence over 2 years. Age, BMI, and socioeconomic factors were identified as significant predictors of hypertension. CONCLUSIONS: Our machine learning model effectively predicted the 2-year risk of hypertension, making it particularly suitable for preventive health care management in high-risk populations residing in the desert regions of China. Our model exhibited excellent predictive performance and has potential for clinical application. A web-based application was developed based on our predictive model, which further enhanced the accessibility for clinical and public health use, aiding in reducing the burden of hypertension through timely prevention strategies.",
+      "date": "2025-03-12",
+      "year": 2025,
+      "doi": "10.2196/68442",
+      "arxiv_id": "",
+      "venue": "Journal of Medical Internet Research",
+      "type": "article",
+      "citations": 7,
+      "fwci": 13.0351,
+      "percentile": 0.98323937,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.jmir.org/2025/1/e68442/PDF",
+      "landing_url": "https://doi.org/10.2196/68442",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 36,
+      "authors": [
+        "Yinlin Cheng",
+        "Kuiying Gu",
+        "Weidong Ji",
+        "Zhensheng Hu",
+        "Yining Yang",
+        "Yi Zhou"
+      ],
+      "scoring": {
+        "final_score": 0.3148,
+        "impact_score": 0.4061,
+        "relevance": 0.7,
+        "topic_points": 7.0,
+        "age_months": 16.5,
+        "citations_per_month": 0.42,
+        "components": {
+          "velocity": 0.326,
+          "citations": 0.392,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "hyperparameter optimization",
+          "feature selection",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "deep learning",
+          "transformer"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4416208996",
+      "title": "AegisGuard: A Multi-Stage Hybrid Intrusion Detection System with Optimized Feature Selection for Industrial IoT Security",
+      "abstract": "The rapid expansion of the Industrial Internet of Things (IIoT) within smart grid infrastructures has increased the risk of sophisticated cyberattacks, where severe class imbalance and stringent real-time requirements continue to hinder the effectiveness of conventional intrusion detection systems (IDSs). Existing approaches often achieve high accuracy on specific datasets but lack generalizability, interpretability, and stability when deployed across heterogeneous IIoT environments. This paper introduces AegisGuard, a hybrid intrusion detection framework that integrates an adaptive four-stage sampling process with a calibrated ensemble learning strategy. The sampling module dynamically combines SMOTE, SMOTE-ENN, ADASYN, and controlled under sampling to mitigate the extreme imbalance between benign and malicious traffic. A quantum-inspired feature selection mechanism then fuses statistical, informational, and model-based significance measures through a trust-aware weighting scheme to retain only the most discriminative attributes. The optimized ensemble, comprising Random Forest, Extra Trees, LightGBM, XGBoost, and CatBoost, undergoes Optuna-based hyperparameter tuning and post-training probability calibration to minimize false alarms while preserving accuracy. Experimental evaluation on four benchmark datasets demonstrates the robustness and scalability of AegisGuard. On the CIC-IoT 2023 dataset, it achieves 99.6% accuracy and a false alarm rate of 0.31%, while maintaining comparable performance on TON-IoT (98.3%), UNSW-NB15 (98.4%), and Bot-IoT (99.4%). The proposed framework reduces feature dimensionality by 54% and memory usage by 65%, enabling near real-time inference (0.42 s per sample) suitable for operational IIoT environments.",
+      "date": "2025-11-14",
+      "year": 2025,
+      "doi": "10.3390/s25226958",
+      "arxiv_id": "",
+      "venue": "Sensors",
+      "type": "article",
+      "citations": 6,
+      "fwci": 3.1046,
+      "percentile": 0.92638657,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/1424-8220/25/22/6958/pdf?version=1763107118",
+      "landing_url": "https://doi.org/10.3390/s25226958",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 48,
+      "authors": [
+        "Mounir Mohammad Abou Elasaad",
+        "Samir G. Sayed",
+        "Mohamed M. El-Dakroury"
+      ],
+      "scoring": {
+        "final_score": 0.2987,
+        "impact_score": 0.4372,
+        "relevance": 0.5775,
+        "topic_points": 5.77,
+        "age_months": 8.4,
+        "citations_per_month": 0.71,
+        "components": {
+          "velocity": 0.443,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "calibrat",
+          "hyperparameter tuning",
+          "optuna",
+          "ensemble",
+          "feature selection",
+          "interpretab",
+          "generaliz"
+        ],
+        "application_domains": [
+          "intrusion detection",
+          "iot"
+        ],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W7133216176",
+      "title": "A Hybrid Ensemble Framework for Rare Event Detection in Large-Scale Tabular Data",
+      "abstract": "Rare event detection in large tabular data remains a computationally challenging problem due to class imbalance, heterogeneous feature distributions, and unstable thresholds. Traditional machine learning approaches based on individual models and fixed thresholds often exhibit limited robustness and reproducibility in such settings. This paper proposes a hybrid ensemble framework for rare event detection that integrates heterogeneous machine learning models through threshold-aware probabilistic aggregation. The framework combines gradient-boosted decision trees, regularized linear models, and neural networks, leveraging their complementary inductive biases. To ensure reproducibility and robust performance evaluation under severe class imbalance, a leaky-controlled evaluation protocol is employed, including rootwise summation, probability calibration, and validation-based threshold optimization. The proposed approach is evaluated on a large tabular dataset containing approximately 50,000 observations. Experimental results demonstrate improved rare event detection and robust generalization performance compared to individual baseline models. Explainability is achieved through Shapley Additive Explanations (SHAP)-based attribution analysis and clustering in the explanation space, enabling transparent analysis of ensemble decision-making behavior. The proposed framework represents a general-purpose computational solution for rare event detection and can be applied to a wide range of data-driven decision-making and anomaly detection problems.",
+      "date": "2026-03-01",
+      "year": 2026,
+      "doi": "10.3390/computers15030151",
+      "arxiv_id": "",
+      "venue": "Computers",
+      "type": "article",
+      "citations": 1,
+      "fwci": 9.7964,
+      "percentile": 0.96673254,
+      "cited_by_pct_year": 97,
+      "pdf_url": "https://www.mdpi.com/2073-431X/15/3/151/pdf",
+      "landing_url": "https://doi.org/10.3390/computers15030151",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 31,
+      "authors": [
+        "Natalya Maxutova",
+        "\u0410kmaral Kassymova",
+        "Kuanysh Kadirkulov",
+        "Aisulu Ismailova",
+        "Gulkiz Zhidekulova",
+        "Zhanar Azhibekova",
+        "Jamalbek Tussupov",
+        "Quvvatali Rakhimov"
+      ],
+      "scoring": {
+        "final_score": 0.2981,
+        "impact_score": 0.2981,
+        "relevance": 1.0,
+        "topic_points": 19.0,
+        "age_months": 4.9,
+        "citations_per_month": 0.2,
+        "components": {
+          "velocity": 0.196,
+          "citations": 0.131,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "calibrat",
+          "regulariz",
+          "tabular",
+          "threshold optimization",
+          "ensemble",
+          "shap",
+          "explainab",
+          "generaliz"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4411557121",
+      "title": "Land Subsidence Susceptibility Modelling in Attica, Greece: A Machine Learning Approach Using InSAR and Geospatial Data",
+      "abstract": "Land subsidence significantly threatens urban infrastructure, agricultural productivity, and environmental sustainability. This study develops a land subsidence susceptibility model by integrating Small Baseline Subset (SBAS) Interferometric Synthetic Aperture Radar (InSAR) data with key geospatial factors using machine learning approaches. The study focuses on the Attica prefecture, Greece, and utilizes SBAS InSAR data from 2015 to 2021 to extract ground deformation velocities by classifying them into four susceptibility levels: stable, low, moderate, and high. The susceptibility results indicate that stable zones constitute 58.2% of the study area, followed by low (27.2%), moderate (11.2%), and high susceptibility zones (3.4%), predominantly concentrated in areas undergoing hydrological stress and urbanization. Random Forest (RF) and XGBoost (XGB) models incorporate a comprehensive set of causal factors, including slope, aspect, land use, groundwater level, geology, and rainfall. The evaluation of the models includes accuracy metrics and confusion matrices. The XGB model achieved the highest performance, recording an accuracy of 94%, with well-balanced predictions across all susceptibility classes. Addressing class imbalance during model training improved the recall of minority classes, though with slight trade-offs in precision. Feature importance analysis identifies proximity to streams, land use, aspect, rainfall, and groundwater extraction as the most influential factors driving subsidence susceptibility. This methodology demonstrates high reliability and robustness in predicting land subsidence susceptibility, providing critical insights for land-use planning and mitigation strategies. These findings establish a scalable framework for regional and global applications, contributing to sustainable land management and risk reduction efforts.",
+      "date": "2025-06-21",
+      "year": 2025,
+      "doi": "10.3390/earth6030061",
+      "arxiv_id": "",
+      "venue": "Earth",
+      "type": "article",
+      "citations": 7,
+      "fwci": 20.4513,
+      "percentile": 0.99021548,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2673-4834/6/3/61/pdf?version=1750491003",
+      "landing_url": "https://doi.org/10.3390/earth6030061",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 79,
+      "authors": [
+        "Vishnuvardhan Reddy Yaragunda",
+        "Divya Sekhar Vaka",
+        "Emmanouil Oikonomou"
+      ],
+      "scoring": {
+        "final_score": 0.2793,
+        "impact_score": 0.4215,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 13.2,
+        "citations_per_month": 0.53,
+        "components": {
+          "velocity": 0.374,
+          "citations": 0.392,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4412364816",
+      "title": "Detecting schizophrenia, bipolar disorder, psychosis vulnerability and major depressive disorder from 5\u2009minutes of online-collected speech",
+      "abstract": "Psychosis poses substantial social and healthcare burdens. The analysis of speech is a promising approach for the diagnosis and monitoring of psychosis, capturing symptoms like thought disorder and flattened affect. Recent advancements in Natural Language Processing (NLP) methodologies enable the automated extraction of informative speech features, which has been leveraged for early psychosis detection and assessment of symptomology. However, critical gaps persist, including the absence of standardized sample collection protocols, small sample sizes, and a lack of multi-illness classification, limiting clinical applicability. Our study aimed to (1) identify an optimal assessment approach for the online and remote collection of speech, in the context of assessing the psychosis spectrum and evaluate whether a fully automated, speech-based machine learning (ML) pipeline can discriminate among different conditions on the schizophrenia-bipolar spectrum (SSD-BD-SPE), help-seeking comparison subjects (MDD), and healthy controls (HC) at varying layers of analysis and diagnostic complexity. We adopted online data collection methods to collect 20 min of speech and demographic information from individuals. Participants were categorized as \"healthy\" help-seekers (HC), having a schizophrenia-spectrum disorder (SSD), bipolar disorder (BD), major depressive disorder (MDD), or being on the psychosis spectrum with sub-clinical psychotic experiences (SPE). SPE status was determined based on self-reported clinical diagnosis and responses to the PHQ-8 and PQ-16 screening questionnaires, while other diagnoses were determined based on self-report from participants. Linguistic and paralinguistic features were extracted and ensemble learning algorithms (e.g., XGBoost) were used to train models. A 70-30% train-test split and 30-fold cross-validation was used to validate the model performance. The final analysis sample included 1140 individuals and 22,650 min of speech. Using 5 min of speech, our model could discriminate between HC and those with a serious mental illness (SSD or BD) with 86% accuracy (AUC = 0.91, Recall = 0.7, Precision = 0.98). Furthermore, our model could discern among HC, SPE, BD and SSD groups with 86% accuracy (F1 macro = 0.855, Recall Macro = 0.86, Precision Macro = 0.86). Finally, in a 5-class discrimination task including individuals with MDD, our model had 76% accuracy (F1 macro = 0.757, Recall Macro = 0.758, Precision Macro = 0.766). Our ML pipeline demonstrated disorder-specific learning, achieving excellent or good accuracy across several classification tasks. We demonstrated that the screening of mental disorders is possible via a fully automated, remote speech assessment pipeline. We tested our model on relatively high number conditions (5 classes) in the literature and in a stratified sample of psychosis spectrum, including HC, SPE, SSD and BD (4 classes). We tested our model on a large sample (N = 1150) and demonstrated best-in-class accuracy with remotely collected speech data in the psychosis spectrum, however, further clinical validation is needed to test the reliability of model performance.",
+      "date": "2025-07-12",
+      "year": 2025,
+      "doi": "10.1038/s41398-025-03433-0",
+      "arxiv_id": "",
+      "venue": "Translational Psychiatry",
+      "type": "article",
+      "citations": 5,
+      "fwci": 4.1217,
+      "percentile": 0.94446377,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.nature.com/articles/s41398-025-03433-0.pdf",
+      "landing_url": "https://doi.org/10.1038/s41398-025-03433-0",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 75,
+      "authors": [
+        "Julianna Olah",
+        "Win Lee Edwin Wong",
+        "Atta-ul Raheem Rana Chaudhry",
+        "Omar Mena",
+        "Sunny X. Tang"
+      ],
+      "scoring": {
+        "final_score": 0.2719,
+        "impact_score": 0.3885,
+        "relevance": 0.6,
+        "topic_points": 6.0,
+        "age_months": 12.5,
+        "citations_per_month": 0.4,
+        "components": {
+          "velocity": 0.314,
+          "citations": 0.338,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "natural language",
+          "nlp",
+          "ensemble",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414555118",
+      "title": "Machine learning-based estimation of discharge coefficient for semicircular labyrinth weirs",
+      "abstract": "Accurately predicting the discharge coefficient ( C d ) in weir structures is crucial for improving hydraulic designs and ensuring their safe operation. This study focuses on developing and testing advanced Machine Learning (ML) models to estimate C d in Semicircular Labyrinth Weirs (SCLWs). The models explored include a Tabular Neural Network (TabNet) optimized with the Moth Flame Optimization algorithm (TabNet-MFO), an Extreme Learning Machine (ELM) enhanced with the Jaya and Firefly Algorithms (ELM-JFO), a Decision Tree (DT), and a Light Gradient Boosting Machine (LightGBM). One of the key innovations in this study is the introduction of the TabNet-MFO framework. Through sensitivity analysis, using tools like the Explainable Boosting Machine (EBM) and SHapley Additive exPlanations (SHAP), the study found that the ratio of upstream flow depth to weir height ( h/P ) is the most significant factor affecting C d predictions. Other important factors include the number of weir cycles ( N ) and the ratio of crest length to weir height ( l C /P ). The dataset was split into 75% for train and 25% for validation. The performance of each model was gauged using a number of statistical indicators. They were the coefficient of determination ( R 2 ), the Root Mean Square Error (RMSE), the symmetric Mean Absolute Percentage Error (sMAPE), the Scatter Index (SI), and the Weighted Mean Absolute Percentage Error, or WMAPE and along with Taylor diagrams and the Performance Index (PI) for comparison. In the training phase, the ELM-JFO model delivered the best results in predicting C d , with a PI of 166 and a normalized centered RMSE ( E\u2019 ) of 0.0052. The TabNet-MFO model also performed well, with a PI of 142 and an E\u2019 of 0.0068. The LightGBM and DT models produced good results as well, with PIs of 89.45 and 89.36, respectively. In the testing phase, the TabNet-MFO model remained the top performer (PI = 81.92, E\u2019 = 0.0118), followed by ELM-JFO (PI = 69.71, E\u2019 = 0.0139). LightGBM and DT showed lower accuracy, with PIs of 60.62 and 47.55 and E\u2019 values of 0.0159 and 0.0199, respectively. The novelty of this research lies in combining interpretable and hybrid ML techniques for C d estimation, offering a reliable alternative to traditional empirical and regression-based methods. These results show the potential of ML in improving flow prediction accuracy and supporting better hydraulic structure design.",
+      "date": "2025-09-26",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-18230-4",
+      "arxiv_id": "",
+      "venue": "Scientific Reports",
+      "type": "article",
+      "citations": 6,
+      "fwci": 2.8733,
+      "percentile": 0.90922127,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.nature.com/articles/s41598-025-18230-4.pdf",
+      "landing_url": "https://doi.org/10.1038/s41598-025-18230-4",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 74,
+      "authors": [
+        "Akbar Asgharzadeh-Bonab",
+        "Sajad Bijanvand",
+        "Abbas Parsaie",
+        "Ehsan Afaridegan"
+      ],
+      "scoring": {
+        "final_score": 0.265,
+        "impact_score": 0.4239,
+        "relevance": 0.5,
+        "topic_points": 5.0,
+        "age_months": 10.0,
+        "citations_per_month": 0.6,
+        "components": {
+          "velocity": 0.402,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "tabular",
+          "shap",
+          "interpretab",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4409715489",
+      "title": "Multi-Class Intrusion Detection in Internet of Vehicles: Optimizing Machine Learning Models on Imbalanced Data",
+      "abstract": "The Internet of Vehicles (IoV) presents complex cybersecurity challenges, particularly against Denial-of-Service (DoS) and spoofing attacks targeting the Controller Area Network (CAN) bus. This study leverages the CICIoV2024 dataset, comprising six distinct classes of benign traffic and various types of attacks, to evaluate advanced machine learning techniques for instrusion detection systems (IDS). The models XGBoost, Random Forest, AdaBoost, Extra Trees, Logistic Regression, and Deep Neural Network were tested under realistic, imbalanced data conditions, ensuring that the evaluation reflects real-world scenarios where benign traffic dominates. Using hyperparameter optimization with Optuna, we achieved significant improvements in detection accuracy and robustness. Ensemble methods such as XGBoost and Random Forest consistently demonstrated superior performance, achieving perfect accuracy and macro-average F1-scores, even when detecting minority attack classes, in contrast to previous results for the CICIoV2024 dataset. The integration of optimized hyperparameter tuning and a broader methodological scope culminated in an IDS framework capable of addressing diverse attack scenarios with exceptional precision.",
+      "date": "2025-04-07",
+      "year": 2025,
+      "doi": "10.3390/fi17040162",
+      "arxiv_id": "",
+      "venue": "Future Internet",
+      "type": "article",
+      "citations": 10,
+      "fwci": 6.8487,
+      "percentile": 0.9688808,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/1999-5903/17/4/162/pdf?version=1744018342",
+      "landing_url": "https://doi.org/10.3390/fi17040162",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 28,
+      "authors": [
+        "\u00c1gata Palma",
+        "M\u00e1rio Antunes",
+        "Jorge Bernardino",
+        "Ana Alves"
+      ],
+      "scoring": {
+        "final_score": 0.2486,
+        "impact_score": 0.4505,
+        "relevance": 0.4025,
+        "topic_points": 4.02,
+        "age_months": 15.7,
+        "citations_per_month": 0.64,
+        "components": {
+          "velocity": 0.416,
+          "citations": 0.452,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "hyperparameter optimization",
+          "hyperparameter tuning",
+          "optuna",
+          "ensemble"
+        ],
+        "application_domains": [
+          "intrusion detection",
+          "vehicle"
+        ],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414027570",
+      "title": "Explainable machine learning for early detection of Parkinson\u2019s disease in aging populations using vocal biomarkers",
+      "abstract": "Introduction: Parkinson's Disease (PD) is a progressive neurodegenerative disorder that significantly affects the aging population, creating a growing burden on global health systems. Early detection of PD is clinically challenging due to the gradual and ambiguous onset of symptoms. Methods: This study presents a machine-learning framework for the early identification of PD using non-invasive biomedical voice biomarkers from the UCI Parkinson's dataset. The dataset consists of 195 sustained phonation recordings from 31 participants (23 PD and 8 healthy controls, ages 46-85). The methodology includes subject-level stratified splitting and normalization, along with BorderlineSMOTE to address class imbalance. Initially, an XGBoost model is applied to select the top 10 acoustic features, followed by a Bayesian-optimized XGBoost classifier, with the decision threshold tuned via F1-maximization on validation data. Results: On the held-out test set, the model achieves 98.0% accuracy, 0.97 macro-F1, and 0.991 ROC-AUC. This performance exceeds that of a deep neural network baseline by 4.0 percentage points in accuracy (94.0% to 98.0%), 4.3 percentage points in macro-F1 (92.7% to 97.0%), and 0.050 in AUC (0.941 to 0.991). Compared to a classical SVM, it outperforms by 7.0 percentage points in accuracy (91.0% to 98.0%), 6.5 percentage points in macro-F1 (90.5% to 97.0%), and 0.089 in AUC (0.902 to 0.991). Discussion: Model decisions are elucidated using SHAP, offering global and patient-specific insights into the influential voice features. These findings indicate the feasibility of a non-invasive, scalable, and explainable voice-based tool for early PD screening, highlighting its potential integration into mobile or telehealth diagnostic platforms.",
+      "date": "2025-09-05",
+      "year": 2025,
+      "doi": "10.3389/fnagi.2025.1672971",
+      "arxiv_id": "",
+      "venue": "Frontiers in Aging Neuroscience",
+      "type": "article",
+      "citations": 6,
+      "fwci": 3.9849,
+      "percentile": 0.94312661,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1672971/pdf",
+      "landing_url": "https://doi.org/10.3389/fnagi.2025.1672971",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 29,
+      "authors": [
+        "Bright Egbo",
+        "Zhanbota Nigmetolla",
+        "Naveed Ahmad Khan",
+        "Prashant K. Jamwal"
+      ],
+      "scoring": {
+        "final_score": 0.2478,
+        "impact_score": 0.4191,
+        "relevance": 0.455,
+        "topic_points": 4.55,
+        "age_months": 10.7,
+        "citations_per_month": 0.56,
+        "components": {
+          "velocity": 0.386,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "macro-f1",
+          "imbalanc",
+          "class imbalance",
+          "decision threshold",
+          "shap",
+          "explainab"
+        ],
+        "application_domains": [
+          "disease"
+        ],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414310606",
+      "title": "Machine Learning-Based Framework for Pre-Impact Same-Level Fall and Fall-from-Height Detection in Construction Sites Using a Single Wearable Inertial Measurement Unit",
+      "abstract": "Same-level-falls (SLFs) and falls-from-height (FFHs) remain major causes of severe injuries and fatalities on construction sites. Researchers are actively developing fall-prevention systems requiring accurate SLF and FFH detection in construction settings prone to false positives. In this study, a machine learning-based approach was established for accurate identification of SLF, FFH, and non-fall events using a single waist-mounted inertial measurement unit (IMU). A total of 48 participants executed 39 non-fall activities, 10 types of SLFs, and 8 types of FFHs, with a dummy used for falls exceeding 0.5 m. A two-stage feature extraction yielded 168 descriptors per data window, and an ensemble SHAP-PFI method selected the 153 most informative variables. The weighted XGBoost classifier, optimized via Bayesian techniques, outperformed other current boosting algorithms. Using 5-fold cross-validation, it achieved an average macro F1-score of 0.901 and macro Matthews correlation coefficient of 0.869, with a latency of 1.51 \u00d7 10\u22123 ms per window. Notably, the average lead times were 402 ms for SLFs and 640 ms for FFHs, surpassing the 130 ms inflation time required for wearable airbags. This pre-impact SLF and FFH detection approach delivers both rapid and precise detection, positioning it as a viable central component for wearable fall-prevention devices in fast-paced construction scenarios.",
+      "date": "2025-09-17",
+      "year": 2025,
+      "doi": "10.3390/bios15090618",
+      "arxiv_id": "",
+      "venue": "Biosensors",
+      "type": "article",
+      "citations": 3,
+      "fwci": 2.6377,
+      "percentile": 0.90100609,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2079-6374/15/9/618/pdf?version=1758116827",
+      "landing_url": "https://doi.org/10.3390/bios15090618",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 84,
+      "authors": [
+        "Oleksandr Yuhai",
+        "Yubin Cho",
+        "Joung Hwan Mun"
+      ],
+      "scoring": {
+        "final_score": 0.2448,
+        "impact_score": 0.3498,
+        "relevance": 0.6,
+        "topic_points": 6.0,
+        "age_months": 10.3,
+        "citations_per_month": 0.29,
+        "components": {
+          "velocity": 0.253,
+          "citations": 0.261,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "macro f1",
+          "ensemble",
+          "shap",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4417524889",
+      "title": "HydroPredictor a hybrid machine learning model for addressing data scarcity in groundwater prediction",
+      "abstract": "Groundwater prediction in data-scarce and environmentally sensitive regions presents a persistent challenge due to limited observational data, spatial heterogeneity, and the nonlinear nature of hydrogeological processes. In this study, we propose HydroPredictor, a hybrid machine learning framework that integrates the categorical handling efficiency of CatBoost with the nonlinear feature learning capacity of a regularized Multi-Layer Perceptron (MLP). The model was trained on a geo- referenced dataset of 315 samples from the Feija Basin in southeastern Morocco, incorporating ten environmental predictors such as elevation, rainfall, soil permeability, NDVI, and topographic wetness index. The pipeline includes Optuna-based hyperparameter optimization and 5-fold cross-validation to ensure robustness and generalization. HydroPredictor achieved a testing accuracy of 89.23%, with an F1-score of 0.8937 and Area Under the Curve (AUC) values exceeding 0.90 across all groundwater potential classes. Statistical validation using the Friedman and Wilcoxon signed-rank tests (p < 0.05) confirmed its significant outperformance over conventional models, including Random Forest, Support Vector Machine (SVM), and standalone MLP. Furthermore, HydroPredictor demonstrated superior generalization compared to prior models in the literature (e.g., RF-SSA: AUC = 0.840; GBDT: AUC = 0.88), while maintaining minimal overfitting (\u2206Accuracy = 0.35%). By combining interpretable tree-based embeddings with deep neural representations, HydroPredictor provides a robust and scalable solution for groundwater classification in data-limited settings, offering a reproducible and operationally relevant tool for sustainable groundwater resource management under climatic and environmental uncertainty.",
+      "date": "2025-12-18",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-24960-2",
+      "arxiv_id": "",
+      "venue": "Scientific Reports",
+      "type": "article",
+      "citations": 5,
+      "fwci": 1.9636,
+      "percentile": 0.86154266,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.nature.com/articles/s41598-025-24960-2_reference.pdf",
+      "landing_url": "https://doi.org/10.1038/s41598-025-24960-2",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 56,
+      "authors": [
+        "Abdessamad Elmotawakkil",
+        "Adil Moumane",
+        "Assia Zahi",
+        "Abdelkhalik Sadiki",
+        "Jamal Al Karkouri",
+        "Mouhcine Batchi",
+        "Suraj Kumar Bhagat",
+        "Nourddine Enneya"
+      ],
+      "scoring": {
+        "final_score": 0.2411,
+        "impact_score": 0.4267,
+        "relevance": 0.42,
+        "topic_points": 4.2,
+        "age_months": 7.3,
+        "citations_per_month": 0.69,
+        "components": {
+          "velocity": 0.433,
+          "citations": 0.338,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "regulariz",
+          "hyperparameter optimization",
+          "optuna",
+          "interpretab",
+          "cross-validation",
+          "generaliz"
+        ],
+        "application_domains": [
+          "groundwater"
+        ],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4411650474",
+      "title": "ISELDP: An Enhanced Dropout Prediction Model Using a Stacked Ensemble Approach for In-Session Learning Platforms",
+      "abstract": "High dropout rates remain a significant challenge in Massive Open Online Courses (MOOCs), making early identification of at-risk students crucial. This study introduces a novel approach called In-Session Stacked Ensemble Learning for Dropout Prediction (ISELDP), which predicts student dropout during course sessions by combining multiple base learners\u2014Adaptive Boosting (AdaBoost), Random Forest (RF), Extreme Gradient Boosting (XGBoost), and Gradient Boosting\u2014into a stacked ensemble with a Multi-Layer Perceptron (MLP) serving as the meta-learner. To optimise model performance, hyperparameters were tuned using Grid Search. The proposed method was evaluated under two scenarios using in-session student interaction data, one with imbalanced data and another with balanced data. Results demonstrate that ISELDP achieves an average accuracy of 88%, outperforming individual baseline models with improvements of up to 2% in accuracy and 2.4% in F1-score.",
+      "date": "2025-06-25",
+      "year": 2025,
+      "doi": "10.3390/electronics14132568",
+      "arxiv_id": "",
+      "venue": "Electronics",
+      "type": "article",
+      "citations": 8,
+      "fwci": 7.3647,
+      "percentile": 0.97028105,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.mdpi.com/2079-9292/14/13/2568/pdf?version=1750848454",
+      "landing_url": "https://doi.org/10.3390/electronics14132568",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 34,
+      "authors": [
+        "Saad Alghamdi",
+        "Ben Soh",
+        "Alice Li"
+      ],
+      "scoring": {
+        "final_score": 0.2407,
+        "impact_score": 0.4376,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 13.1,
+        "citations_per_month": 0.61,
+        "components": {
+          "velocity": 0.407,
+          "citations": 0.414,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "ensemble",
+          "grid search"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4409548629",
+      "title": "Towards safer steel operations with a multi model framework for accident prediction and risk assessment simulation",
+      "abstract": "This research concentrates on an introduction of a multi-model approach integrating Bayesian Networks (BN), Machine Learning (ML) models, Natural Language Processing (NLP) with Sentiment Analysis, Agent-Based Modeling (ABM), and Survival Analysis to improve predictive modelling of accident causation in high-risk steel industries. The significance of the artificial intelligence (AI) based models is that every approach complements other substantiating the hypothesis. Also, the augmentation of prediction accuracy could be achieved through AI approaches contrary to conventional methods. Results reveal that the application of AI model improves the prediction accuracy compared to conventional approaches. BN application uncovers the machine conditions and human errors responsible for causing accidents. Gradient Boosting Machines discussed equipment-related incidents, while NLP analysis demonstrated negative sentiment due to non-compliance with safety protocols. Moving forward, ABM simulations in accidents focus on personal protective equipment (PPE) compliance and machine maintenance. Survival analysis indicated the role of timely interventions in reducing severe accidents. Additionally, temporal insights aid in timing interventions, improving safety strategy efficacy. The outcome of this research discusses advancements in proactive accident prediction and risk management in high-risk steel industrial environments by addressing latent risk factors.",
+      "date": "2025-04-17",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-96028-0",
+      "arxiv_id": "",
+      "venue": "Scientific Reports",
+      "type": "article",
+      "citations": 8,
+      "fwci": 5.6089,
+      "percentile": 0.96528052,
+      "cited_by_pct_year": 100,
+      "pdf_url": "https://www.nature.com/articles/s41598-025-96028-0.pdf",
+      "landing_url": "https://doi.org/10.1038/s41598-025-96028-0",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 32,
+      "authors": [
+        "Shatrudhan Pandey",
+        "Abhishek Kumar Singh",
+        "Shreyanshu Parhi",
+        "Sanjay Kumar Jha"
+      ],
+      "scoring": {
+        "final_score": 0.2343,
+        "impact_score": 0.426,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 15.3,
+        "citations_per_month": 0.52,
+        "components": {
+          "velocity": 0.37,
+          "citations": 0.414,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "natural language",
+          "nlp"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4408515182",
+      "title": "Confidence ensembles: Tabular data classifiers on steroids",
+      "abstract": "The astounding amount of research conducted in the last decades provided plenty of Machine Learning (ML) algorithms and models for solving a wide variety of tasks for tabular data. However, classifiers are not always fast, accurate, and robust to unknown inputs, calling for further research in the domain. This paper proposes two classifiers based on confidence ensembles : Confidence Bagging (ConfBag) and Confidence Boosting (ConfBoost). Confidence ensembles build upon a base estimator and create base learners relying on the concept of \u201cconfidence\u201d in predictions. They apply to any classification problem: binary and multi-class, supervised or unsupervised, without requiring additional data with respect to those already required by the base estimator. Our experimental evaluation using a range of tabular datasets shows that confidence ensembles, and especially ConfBoost, i) build more accurate classifiers than base estimators alone, even using a limited amount of base learners, ii) are relatively easy to tune as they rely on a limited number of hyper-parameters, and iii) are significantly more robust when dealing with unknown, unexpected input data compared to other tabular data classifiers. Amongst others, confidence ensembles showed potential in going beyond the performance of de-facto standard classifiers for tabular data such as Random Forest and eXtreme Gradient Boosting. ConfBag and ConfBoost are publicly available as PyPI package, compliant with widely used Python frameworks such as scikit-learn and pyod , and require little to no tuning to be exercised on tabular datasets for classification tasks.",
+      "date": "2025-03-17",
+      "year": 2025,
+      "doi": "10.1016/j.inffus.2025.103126",
+      "arxiv_id": "",
+      "venue": "Information Fusion",
+      "type": "article",
+      "citations": 6,
+      "fwci": 7.5866,
+      "percentile": 0.96669177,
+      "cited_by_pct_year": 99,
+      "pdf_url": "",
+      "landing_url": "https://doi.org/10.1016/j.inffus.2025.103126",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 111,
+      "authors": [
+        "Tommaso Zoppi",
+        "Peter Popov"
+      ],
+      "scoring": {
+        "final_score": 0.2323,
+        "impact_score": 0.4224,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 16.4,
+        "citations_per_month": 0.37,
+        "components": {
+          "velocity": 0.297,
+          "citations": 0.367,
+          "venue": 0.6,
+          "access": 0.4
+        },
+        "topic_hits": [
+          "tabular",
+          "ensemble"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4410233427",
+      "title": "Explainable AI and Feature Engineering for Machine-Learning-Driven Predictions of the Properties of Cu-Cr-Zr Alloys: A Hyperparameter Tuning and Model Stacking Approach",
+      "abstract": "High-performance copper alloys are crucial for integrated circuit lead frames due to their high density, multifunctionality, and low cost. High-performance copper alloys typically address the competing issues of high strength and high electrical conductivity through alloying and processing control methods. However, the traditional methods for developing these alloys are time-consuming, expensive, and complex processes. This study utilizes Explainable AI by employing machine learning (ML) and deep learning (DL) techniques to predict the hardness (HRC) and electrical conductivity (mS/m) based on the alloy composition, including Cr, Zr, Ce, and La, and the processing parameters, namely the aging time, of Cu-Cr-Zr alloys. A comprehensive dataset of 47 experimental Cu-Cr-Zr alloy samples, derived from prior experimental studies, was analyzed using feature engineering, correlation analysis, and explainability methods such as SHapley Additive exPlanations (SHAP). Various ML models, including ensemble methods like XGBoost, CatBoost, and AdaBoost, were evaluated for their predictive performance. The feature importance analysis revealed that the aging time and Zr content significantly influence the hardness, followed by Ce content, while Cr and La contents reveal a weak contribution to hardness values. Electrical conductivity is predominantly controlled by aging time, with a weak negative influence of the alloying elements. These findings align well with metallurgical principles, where microstructural refinement and precipitation behavior dictate the hardness and conductivity of Cu-Cr-Zr alloys. Hyperparameter tuning and model stacking further enhanced the predictive accuracy, with the final stacked models achieving R2 scores of 0.8762 for hardness within a training time of 1.739 s and 0.8132 for electrical conductivity within a training time of 1.091 s. These findings demonstrate the effectiveness of ML-driven approaches in material property predictions, providing valuable insights for material design and property processing parameter optimization.",
+      "date": "2025-05-09",
+      "year": 2025,
+      "doi": "10.3390/pr13051451",
+      "arxiv_id": "",
+      "venue": "Processes",
+      "type": "article",
+      "citations": 3,
+      "fwci": 0.8493,
+      "percentile": 0.67983118,
+      "cited_by_pct_year": 97,
+      "pdf_url": "https://www.mdpi.com/2227-9717/13/5/1451/pdf?version=1746795992",
+      "landing_url": "https://doi.org/10.3390/pr13051451",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 21,
+      "authors": [
+        "Mohammed A. Atiea",
+        "Reham Reda",
+        "Sabbah Ataya",
+        "Mervat Ibrahim"
+      ],
+      "scoring": {
+        "final_score": 0.2197,
+        "impact_score": 0.3317,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 14.6,
+        "citations_per_month": 0.21,
+        "components": {
+          "velocity": 0.197,
+          "citations": 0.261,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "hyperparameter tuning",
+          "ensemble",
+          "stacking",
+          "shap",
+          "explainab",
+          "feature engineering"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "deep learning"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W7114809687",
+      "title": "Enhancing project financial performance prediction: An explainable machine learning framework integrating frontier efficiency and super learner",
+      "abstract": "This study investigates the role of frontier operational efficiency in predicting financial performance within Egypt\u2019s emerging market. Data Envelopment Analysis (DEA) quantifies operational efficiency, and its predictive power is assessed within a machine learning (ML) framework, extending beyond traditional financial ratios. A Super Learner ensemble is developed, integrating Random Forest (RF) and Categorical Gradient Boosting (CatBoost) with a linear regression meta-learner. The Super Learner enhances accuracy and robustness by dynamically weighting and combining predictions from diverse base models, using a meta-learner to minimize error, reduce overfitting, and improve generalization. Empirical results demonstrate that incorporating DEA significantly improves predictive performance, increasing R\u00b2 by 3.8% (t = 5.45, p &lt; 0.01). The Super Learner achieves an R\u00b2 of 0.612, with an RMSE of 0.061 and MAE of 0.046, outperforming both linear regression and state-of-the-art ML models. Feature importance analysis (via CatBoost) identifies net working capital (11.5%) and DEA efficiency (10.0%) as the top predictors. SHapley Additive exPlanations (SHAP) and partial dependence analyses further indicate that DEA efficiency, net working capital, and cash holdings exhibit positive but nonlinear associations with financial performance, while leverage demonstrates a concave, nonlinear relationship. These findings provide practical implications for investors, managers, and policymakers, highlighting the strategic value of operational efficiency. Additionally, the study introduces a scalable, interpretable framework combining frontier efficiency metrics with explainable ML, offering a robust tool for financial decision-making.",
+      "date": "2025-12-11",
+      "year": 2025,
+      "doi": "10.5267/j.jpm.2025.10.003",
+      "arxiv_id": "",
+      "venue": "Journal of Project Management",
+      "type": "article",
+      "citations": 2,
+      "fwci": 3.3381,
+      "percentile": 0.93658718,
+      "cited_by_pct_year": 98,
+      "pdf_url": "https://doi.org/10.5267/j.jpm.2025.10.003",
+      "landing_url": "https://doi.org/10.5267/j.jpm.2025.10.003",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 1,
+      "authors": [
+        "Gihan M. Ali"
+      ],
+      "scoring": {
+        "final_score": 0.2193,
+        "impact_score": 0.331,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 7.5,
+        "citations_per_month": 0.27,
+        "components": {
+          "velocity": 0.238,
+          "citations": 0.207,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "ensemble",
+          "shap",
+          "interpretab",
+          "explainab",
+          "generaliz"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4409689399",
+      "title": "A comparative analysis of binary and multi-class classification machine learning algorithms to detect current frailty status using the English longitudinal study of ageing (ELSA)",
+      "abstract": "Background: Physical frailty is a pressing public health issue that significantly increases the risk of disability, hospitalization, and mortality. Early and accurate detection of frailty is essential for timely intervention, reducing its widespread impact on healthcare systems, social support networks, and economic stability. Objective: This study aimed to classify frailty status into binary (frail vs. non-frail) and multi-class (frail vs. pre-frail vs. non-frail) categories. The goal was to detect and classify frailty status at a specific point in time. Model development and internal validation were conducted using data from wave 8 of the English Longitudinal Study of Ageing (ELSA), with external validation using wave 6 data to assess model generalizability. Methods: Nine classification algorithms, including Logistic Regression, Random Forest, K-nearest Neighbor, Gradient Boosting, AdaBoost, XGBoost, LightGBM, CatBoost, and Multi-Layer Perceptron, were evaluated and their performance compared. Results: CatBoost demonstrated the best overall performance in binary classification, achieving high recall (0.951), balanced accuracy (0.928), and the lowest Brier score (0.049) on the internal validation set, and maintaining strong performance externally with a recall of 0.950, balanced accuracy of 0.913, and F1-score of 0.951. Multi-class classification was more challenging, with Gradient Boosting emerging as the top model, achieving the highest recall (0.666) and precision (0.663) on the external validation set, with a strong F1-score (0.664) and reasonable calibration (Brier Score = 0.223). Conclusion: Machine learning algorithms show promise for the detection of current frailty status, particularly in binary classification. However, distinguishing between frailty subcategories remains challenging, highlighting the need for improved models and feature selection strategies to enhance multi-class classification accuracy.",
+      "date": "2025-04-22",
+      "year": 2025,
+      "doi": "10.3389/fragi.2025.1501168",
+      "arxiv_id": "",
+      "venue": "Frontiers in Aging",
+      "type": "article",
+      "citations": 6,
+      "fwci": 4.2443,
+      "percentile": 0.9421047,
+      "cited_by_pct_year": 99,
+      "pdf_url": "https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2025.1501168/pdf",
+      "landing_url": "https://doi.org/10.3389/fragi.2025.1501168",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 36,
+      "authors": [
+        "Charmayne Hughes",
+        "Yan Zhang",
+        "Alireza Pourhossein",
+        "Terezia Jurasova"
+      ],
+      "scoring": {
+        "final_score": 0.2174,
+        "impact_score": 0.3952,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 15.2,
+        "citations_per_month": 0.4,
+        "components": {
+          "velocity": 0.311,
+          "citations": 0.367,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "feature selection",
+          "generaliz"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4415680308",
+      "title": "Domain-Constrained Stacking Framework for Credit Default Prediction",
+      "abstract": "Accurate and reliable credit risk classification is fundamental to the stability of financial systems and the efficient allocation of capital. However, with the rapid expansion of customer information in both volume and complexity, traditional rule-based or purely statistical approaches have become increasingly inadequate. Motivated by these challenges, this study introduces a domain-constrained stacking ensemble framework that systematically integrates business knowledge with advanced machine learning techniques. First, domain heuristics are embedded at multiple stages of the pipeline: threshold-based outlier removal improves data quality, target variable redefinition ensures consistency with industry practice, and feature discretization with monotonicity verification enhances interpretability. Then, each variable is transformed through Weight-of-Evidence (WOE) encoding and evaluated via Information Value (IV), which enables robust feature selection and effective dimensionality reduction. Next, on this transformed feature space, we train logistic regression (LR), random forest (RF), extreme gradient boosting (XGBoost), and a two-layer stacking ensemble. Finally, the ensemble aggregates cross-validated out-of-fold predictions from LR, RF and XGBoost as meta-features, which are fused by a meta-level logistic regression, thereby capturing both linear and nonlinear relationships while mitigating overfitting. Experimental results across two credit datasets demonstrate that the proposed framework achieves superior predictive performance compared with single models, highlighting its potential as a practical solution for credit risk assessment in real-world financial applications.",
+      "date": "2025-10-29",
+      "year": 2025,
+      "doi": "10.3390/math13213451",
+      "arxiv_id": "",
+      "venue": "Mathematics",
+      "type": "article",
+      "citations": 2,
+      "fwci": 4.5752,
+      "percentile": 0.95047119,
+      "cited_by_pct_year": 98,
+      "pdf_url": "https://www.mdpi.com/2227-7390/13/21/3451/pdf?version=1761743341",
+      "landing_url": "https://doi.org/10.3390/math13213451",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 30,
+      "authors": [
+        "Ming-Liang Ding",
+        "Yuliang Ma",
+        "Fuqiang You"
+      ],
+      "scoring": {
+        "final_score": 0.2134,
+        "impact_score": 0.322,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 8.9,
+        "citations_per_month": 0.22,
+        "components": {
+          "velocity": 0.21,
+          "citations": 0.207,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "ensemble",
+          "stacking",
+          "feature selection",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414987631",
+      "title": "TabArena: A Living Benchmark for Machine Learning on Tabular Data",
+      "abstract": "With the growing popularity of deep learning and foundation models for tabular data, the need for standardized and reliable benchmarks is higher than ever. However, current benchmarks are static. Their design is not updated even if flaws are discovered, model versions are updated, or new models are released. To address this, we introduce TabArena, the first continuously maintained living tabular benchmarking system. To launch TabArena, we manually curate a representative collection of datasets and well-implemented models, conduct a large-scale benchmarking study to initialize a public leaderboard, and assemble a team of experienced maintainers. Our results highlight the influence of validation method and ensembling of hyperparameter configurations to benchmark models at their full potential. While gradient-boosted trees are still strong contenders on practical tabular datasets, we observe that deep learning methods have caught up under larger time budgets with ensembling. At the same time, foundation models excel on smaller datasets. Finally, we show that ensembles across models advance the state-of-the-art in tabular machine learning. We observe that some deep learning models are overrepresented in cross-model ensembles due to validation set overfitting, and we encourage model developers to address this issue. We launch TabArena with a public leaderboard, reproducible code, and maintenance protocols to create a living benchmark available at https://tabarena.ai.",
+      "date": "2025-06-20",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2506.16791",
+      "arxiv_id": "2506.16791",
+      "venue": "arXiv (Cornell University)",
+      "type": "preprint",
+      "citations": 1,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.16791",
+      "landing_url": "http://arxiv.org/abs/2506.16791",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Nick Erickson",
+        "Lennart Purucker",
+        "Andrej Tschalzev",
+        "David Holzm\u00fcller",
+        "P. Desai",
+        "David Salinas",
+        "Frank Hutter"
+      ],
+      "scoring": {
+        "final_score": 0.1941,
+        "impact_score": 0.2632,
+        "relevance": 0.65,
+        "topic_points": 6.5,
+        "age_months": 13.2,
+        "citations_per_month": 0.08,
+        "components": {
+          "velocity": 0.087,
+          "citations": 0.131,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "tabular",
+          "ensemble"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "deep learning",
+          "foundation model"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W7118435293",
+      "title": "Integrated regime-aware wind power forecasting using multi-altitude meteorological features and hybrid machine learning",
+      "abstract": "Accurate wind power forecasting is critical for grid stability and renewable energy integration, yet the inherent variability of atmospheric conditions presents significant challenges. This study proposes a unified and scalable pipeline that integrates wind regime detection, temporal sequence modeling, and regime-conditioned deterministic and probabilistic power forecasting. Using 8 years of high-resolution meteorological data from multiple altitudes, we engineer a comprehensive set of physically interpretable features, including wind shear, temperature gradients, and rolling statistics. Regimes are identified via KMeans and Gaussian Mixture Models, with Principal Component Analysis applied post-clustering for visualization and interpretation. Temporal regime dynamics are characterized through both empirical and Markov transition matrices and modeled using Long Short-Term Memory (LSTM) networks for regime sequence prediction. For power forecasting, regime-specific models are developed using tuned ensemble regressors (XGBoost, LightGBM, CatBoost, and Random Forest), complemented by probabilistic approaches including Quantile Regression Forests, quantile-based XGBoost, and Bayesian neural networks. Results show that regime conditioning significantly enhances forecasting performance, with the stacked meta-learning ensemble achieving R 2 = 0.997 and over 30% reduction in MAE compared to baseline methods. Probabilistic models produce well-calibrated prediction intervals, providing uncertainty-aware forecasts suitable for operational decision-making. This work contributes a novel end-to-end framework that jointly models regime persistence, transitions, and regime-conditioned power output, incorporating uncertainty quantification through Quantile Regression Forests, quantile-based XGBoost, and Bayesian Neural Networks, thereby bridging a gap in the literature where these components are often treated in isolation. The approach advances both accuracy and interpretability, offering practical value for wind farm operation and renewable energy integration.",
+      "date": "2026-01-07",
+      "year": 2026,
+      "doi": "10.3389/fenrg.2025.1686125",
+      "arxiv_id": "",
+      "venue": "Frontiers in Energy Research",
+      "type": "article",
+      "citations": 2,
+      "fwci": 7.042,
+      "percentile": 0.9467838,
+      "cited_by_pct_year": 98,
+      "pdf_url": "https://public-pages-files-2025.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2025.1686125/pdf",
+      "landing_url": "https://doi.org/10.3389/fenrg.2025.1686125",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 15,
+      "authors": [
+        "Murat Isik",
+        "Mehmet Ali Yal\u00e7\u0131nkaya"
+      ],
+      "scoring": {
+        "final_score": 0.1859,
+        "impact_score": 0.3379,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 6.6,
+        "citations_per_month": 0.3,
+        "components": {
+          "velocity": 0.26,
+          "citations": 0.207,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "ensemble",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "lstm",
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "openalex",
+      "openalex_id": "https://openalex.org/W4414857391",
+      "title": "Machine Learning Applications for Fraud Detection and Financial Sentiment",
+      "abstract": "This review examines machine learning applications in two major financial tasks: fraud detection and financial sentiment analysis. For fraud detection, research demonstrates that ensemble models, particularly gradient boosting methods such as CatBoost, XGBoost, and LightGBM, achieve high performance in identifying fraudulent transactions under extreme class imbalance, with reported F1 scores above 0.90. Deep learning approaches, including recurrent and convolutional architectures, further enhance detection by modeling sequential transaction behavior, while graph neural networks capture relational structures within transaction networks. In financial sentiment analysis, studies show that transformer-based models such as FinBERT and fine-tuned GPT variants substantially improve classification accuracy compared with traditional methods. Domain-specific corpora, including FiQA and Financial PhraseBank, provide benchmarks for polarity classification and market impact analysis. Emerging multimodal and federated learning frameworks integrate text, speech, and distributed training to address data privacy and modality heterogeneity. The review highlights observed methodological trends, comparative performance metrics, and dataset characteristics, providing an evidence-based synthesis of academic findings up to 2025.",
+      "date": "2025-10-06",
+      "year": 2025,
+      "doi": "10.36227/techrxiv.175977613.37831210/v1",
+      "arxiv_id": "",
+      "venue": "",
+      "type": "preprint",
+      "citations": 1,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175977613.37831210/v1",
+      "landing_url": "https://doi.org/10.36227/techrxiv.175977613.37831210/v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Shannon Waller",
+        "Meilin Zhang",
+        "David Thompson",
+        "Xinyi Li"
+      ],
+      "scoring": {
+        "final_score": 0.1533,
+        "impact_score": 0.2079,
+        "relevance": 0.65,
+        "topic_points": 6.5,
+        "age_months": 9.7,
+        "citations_per_month": 0.1,
+        "components": {
+          "velocity": 0.113,
+          "citations": 0.131,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "class imbalance",
+          "ensemble"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "bert",
+          "convolutional",
+          "deep learning",
+          "fine-tun",
+          "gpt",
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Blog Data Showdown: Machine Learning vs Neuro-Symbolic Models for Gender Classification",
+      "abstract": "Text classification problems, such as gender classification from a blog, have been a well-matured research area that has been well studied using machine learning algorithms. It has several application domains in market analysis, customer recommendation, and recommendation systems. This study presents a comparative analysis of the widely used machine learning algorithms, namely Support Vector Machines (SVM), Naive Bayes (NB), Logistic Regression (LR), AdaBoost, XGBoost, and an SVM variant (SVM_R) with neuro-symbolic AI (NeSy). The paper also explores the effect of text representations such as TF-IDF, the Universal Sentence Encoder (USE), and RoBERTa. Additionally, various feature extraction techniques, including Chi-Square, Mutual Information, and Principal Component Analysis, are explored. Building on these, we introduce a comparative analysis of the machine learning and deep learning approaches in comparison to the NeSy. The experimental results show that the use of the NeSy approach matched strong MLP results despite a limited dataset. Future work on this research will expand the knowledge base, the scope of embedding types, and the hyperparameter configuration to further study the effectiveness of the NeSy approach.",
+      "date": "2025-12-18",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2512.16687",
+      "venue": "2025 International Conference on Information and Communication Technology for Development for Africa (ICT4DA)",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2512.16687v2",
+      "landing_url": "http://arxiv.org/abs/2512.16687v2",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Natnael Tilahun Sinshaw",
+        "Mengmei He",
+        "Tadesse K. Bahiru",
+        "Sudhir Kumar Mohapatra"
+      ],
+      "scoring": {
+        "final_score": 0.1415,
+        "impact_score": 0.2021,
+        "relevance": 0.6,
+        "topic_points": 6.0,
+        "age_months": 7.3,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "text classification",
+          "tf-idf"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "bert",
+          "deep learning",
+          "roberta"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Can We Reliably Predict the Fed's Next Move? A Multi-Modal Approach to U.S. Monetary Policy Forecasting",
+      "abstract": "Forecasting central bank policy decisions remains a persistent challenge for investors, financial institutions, and policymakers due to the wide-reaching impact of monetary actions. In particular, anticipating shifts in the U.S. federal funds rate is vital for risk management and trading strategies. Traditional methods relying only on structured macroeconomic indicators often fall short in capturing the forward-looking cues embedded in central bank communications. This study examines whether predictive accuracy can be enhanced by integrating structured data with unstructured textual signals from Federal Reserve communications. We adopt a multi-modal framework, comparing traditional machine learning models, transformer-based language models, and deep learning architectures in both unimodal and hybrid settings. Our results show that hybrid models consistently outperform unimodal baselines. The best performance is achieved by combining TF-IDF features of FOMC texts with economic indicators in an XGBoost classifier, reaching a test AUC of 0.83. FinBERT-based sentiment features marginally improve ranking but perform worse in classification, especially under class imbalance. SHAP analysis reveals that sparse, interpretable features align more closely with policy-relevant signals. These findings underscore the importance of integrating textual and structured signals transparently. For monetary policy forecasting, simpler hybrid models can offer both accuracy and interpretability, delivering actionable insights for researchers and decision-makers.",
+      "date": "2025-06-28",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2506.22763",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.22763v1",
+      "landing_url": "http://arxiv.org/abs/2506.22763v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Fiona Xiao Jingyi",
+        "Lili Liu"
+      ],
+      "scoring": {
+        "final_score": 0.1383,
+        "impact_score": 0.1383,
+        "relevance": 1.0,
+        "topic_points": 10.0,
+        "age_months": 13.0,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "tf-idf",
+          "imbalanc",
+          "class imbalance",
+          "shap",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "bert",
+          "deep learning",
+          "transformer"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "NOTAI.AI: Explainable Detection of Machine-Generated Text via Curvature and Feature Attribution",
+      "abstract": "We present NOTAI.AI, an explainable framework for machine-generated text detection that extends Fast-DetectGPT by integrating curvature-based signals with neural and stylometric features in a supervised setting. The system combines 17 interpretable features, including Conditional Probability Curvature, ModernBERT detector score, readability metrics, and stylometric cues, within a gradient-boosted tree (XGBoost) meta-classifier to determine whether a text is human- or AI-generated. Furthermore, NOTAI.AI applies Shapley Additive Explanations (SHAP) to provide both local and global feature-level attribution. These attributions are further translated into structured natural-language rationales through an LLM-based explanation layer, which enables user-facing interpretability. The system is deployed as an interactive web application that supports real-time analysis, visual feature inspection, and structured evidence presentation. A web interface allows users to input text and inspect how neural and statistical signals influence the final decision. The source code and demo video are publicly available to support reproducibility.",
+      "date": "2026-03-05",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2603.05617",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.05617v1",
+      "landing_url": "http://arxiv.org/abs/2603.05617v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Oleksandr Marchenko Breneur",
+        "Adelaide Danilov",
+        "Aria Nourbakhsh",
+        "Salima Lamsiyah"
+      ],
+      "scoring": {
+        "final_score": 0.1383,
+        "impact_score": 0.1383,
+        "relevance": 1.0,
+        "topic_points": 12.5,
+        "age_months": 4.8,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "machine-generated text",
+          "text detection",
+          "stylometr",
+          "shap",
+          "interpretab",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "bert",
+          "gpt",
+          "llm",
+          "modernbert"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "StylOch at PAN: Gradient-Boosted Trees with Frequency-Based Stylometric Features",
+      "abstract": "This submission to the binary AI detection task is based on a modular stylometric pipeline, where: public spaCy models are used for text preprocessing (including tokenisation, named entity recognition, dependency parsing, part-of-speech tagging, and morphology annotation) and extracting several thousand features (frequencies of n-grams of the above linguistic annotations); light-gradient boosting machines are used as the classifier. We collect a large corpus of more than 500 000 machine-generated texts for the classifier's training. We explore several parameter options to increase the classifier's capacity and take advantage of that training set. Our approach follows the non-neural, computationally inexpensive but explainable approach found effective previously.",
+      "date": "2025-07-16",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2507.12064",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2507.12064v1",
+      "landing_url": "http://arxiv.org/abs/2507.12064v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Jeremi K. Ochab",
+        "Mateusz Matias",
+        "Tymoteusz Boba",
+        "Tomasz Walkowiak"
+      ],
+      "scoring": {
+        "final_score": 0.1383,
+        "impact_score": 0.1383,
+        "relevance": 1.0,
+        "topic_points": 11.5,
+        "age_months": 12.4,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "machine-generated text",
+          "stylometr",
+          "corpus",
+          "n-gram",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": true
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Calibrated Credit Intelligence: Shift-Robust and Fair Risk Scoring with Bayesian Uncertainty and Gradient Boosting",
+      "abstract": "Credit risk scoring must support high-stakes lending decisions where data distributions change over time, probability estimates must be reliable, and group-level fairness is required. While modern machine learning models improve default prediction accuracy, they often produce poorly calibrated scores under distribution shift and may create unfair outcomes when trained without explicit constraints. This paper proposes Calibrated Credit Intelligence (CCI), a deployment-oriented framework that combines (i) a Bayesian neural risk scorer to capture epistemic uncertainty and reduce overconfident errors, (ii) a fairnessconstrained gradient boosting model to control group disparities while preserving strong tabular performance, and (iii) a shiftaware fusion strategy followed by post-hoc probability calibration to stabilize decision thresholds in later time periods. We evaluate CCI on the Home Credit Credit Risk Model Stability benchmark using a time-consistent split to reflect real-world drift. Compared with strong baselines (LightGBM, XGBoost, CatBoost, TabNet, and a standalone Bayesian neural model), CCI achieves the best overall trade-off between discrimination, calibration, stability, and fairness. In particular, CCI reaches an AUC-ROC of 0.912 and an AUC-PR of 0.438, improves operational performance with Recall@1%FPR = 0.509, and reduces calibration error (Brier score 0.087, ECE 0.015). Under temporal shift, CCI shows a smaller AUC-PR drop from early to late periods (0.017), and it lowers group disparities (demographic parity gap 0.046, equal opportunity gap 0.037) compared to unconstrained boosting. These results indicate that CCI produces risk scores that are accurate, reliable, and more equitable under realistic deployment conditions.",
+      "date": "2026-03-06",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2603.06733",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.06733v1",
+      "landing_url": "http://arxiv.org/abs/2603.06733v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Srikumar Nayak"
+      ],
+      "scoring": {
+        "final_score": 0.1383,
+        "impact_score": 0.1383,
+        "relevance": 1.0,
+        "topic_points": 8.5,
+        "age_months": 4.7,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular",
+          "decision threshold"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": true
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Tree Boosting Methods for Balanced andImbalanced Classification and their Robustness Over Time in Risk Assessment",
+      "abstract": "Most real-world classification problems deal with imbalanced datasets, posing a challenge for Artificial Intelligence (AI), i.e., machine learning algorithms, because the minority class, which is of extreme interest, often proves difficult to be detected. This paper empirically evaluates tree boosting methods' performance given different dataset sizes and class distributions, from perfectly balanced to highly imbalanced. For tabular data, tree-based methods such as XGBoost, stand out in several benchmarks due to detection performance and speed. Therefore, XGBoost and Imbalance-XGBoost are evaluated. After introducing the motivation to address risk assessment with machine learning, the paper reviews evaluation metrics for detection systems or binary classifiers. It proposes a method for data preparation followed by tree boosting methods including hyper-parameter optimization. The method is evaluated on private datasets of 1 thousand (K), 10K and 100K samples on distributions with 50, 45, 25, and 5 percent positive samples. As expected, the developed method increases its recognition performance as more data is given for training and the F1 score decreases as the data distribution becomes more imbalanced, but it is still significantly superior to the baseline of precision-recall determined by the ratio of positives divided by positives and negatives. Sampling to balance the training set does not provide consistent improvement and deteriorates detection. In contrast, classifier hyper-parameter optimization improves recognition, but should be applied carefully depending on data volume and distribution. Finally, the developed method is robust to data variation over time up to some point. Retraining can be used when performance starts deteriorating.",
+      "date": "2025-04-25",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2504.18133",
+      "venue": "Intelligent Systems with Applications 22 (2024) 200354",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.18133v1",
+      "landing_url": "http://arxiv.org/abs/2504.18133v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Gissel Velarde",
+        "Michael Weichert",
+        "Anuj Deshmunkh",
+        "Sanjay Deshmane",
+        "Anindya Sudhir",
+        "Khushboo Sharma",
+        "Vaibhav Joshi"
+      ],
+      "scoring": {
+        "final_score": 0.1339,
+        "impact_score": 0.2021,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 15.1,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.3,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "imbalanc",
+          "tabular"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Challenges of Heterogeneity in Big Data: A Comparative Study of Classification in Large-Scale Structured and Unstructured Domains",
+      "abstract": "This study analyzes the impact of heterogeneity (\"Variety\") in Big Data by comparing classification strategies across structured (Epsilon) and unstructured (Rest-Mex, IMDB) domains. A dual methodology was implemented: evolutionary and Bayesian hyperparameter optimization (Genetic Algorithms, Optuna) in Python for numerical data, and distributed processing in Apache Spark for massive textual corpora. The results reveal a \"complexity paradox\": in high-dimensional spaces, optimized linear models (SVM, Logistic Regression) outperformed deep architectures and Gradient Boosting. Conversely, in text-based domains, the constraints of distributed fine-tuning led to overfitting in complex models, whereas robust feature engineering -- specifically Transformer-based embeddings (ROBERTa) and Bayesian Target Encoding -- enabled simpler models to generalize effectively. This work provides a unified framework for algorithm selection based on data nature and infrastructure constraints.",
+      "date": "2025-11-29",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2512.00298",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2512.00298v1",
+      "landing_url": "http://arxiv.org/abs/2512.00298v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Gonz\u00e1lez Trigueros Jes\u00fas Eduardo",
+        "Alonso S\u00e1nchez Alejandro",
+        "Mu\u00f1oz Rivera Emilio",
+        "Pe\u00f1ar\u00e1n Prieto Mariana Jaqueline",
+        "Mendoza Gonz\u00e1lez Camila Natalia"
+      ],
+      "scoring": {
+        "final_score": 0.1331,
+        "impact_score": 0.1383,
+        "relevance": 0.95,
+        "topic_points": 9.5,
+        "age_months": 7.9,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "hyperparameter optimization",
+          "optuna",
+          "generaliz",
+          "feature engineering"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "bert",
+          "fine-tun",
+          "roberta",
+          "transformer"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "From Complaint Narratives to Monetary Relief: A Hybrid Machine Learning Framework for CFPB Consumer Complaints",
+      "abstract": "Consumer financial complaints provide a valuable source of information for identifying service failures, dispute frictions, and operational deficiencies in consumer-facing financial institutions. This paper proposes a hybrid machine learning framework for predicting monetary relief outcomes using Consumer Financial Protection Bureau complaint data. We formulate the task as an imbalanced binary classification problem, where complaints closed with monetary relief are treated as compensable outcomes. The proposed framework integrates multiple sources of predictive information, including complaint narrative text, LDA-based topic representations, interpretable text-engineered features, and structured categorical attributes such as company and state. An XGBoost classifier is trained using a temporal train-test split, with earlier complaints used for model development and more recent complaints reserved for out-of-sample evaluation. Compared with a TF-IDF baseline, the proposed framework substantially improves predictive performance, increasing AUC-ROC from 0.69 to 0.78 and improving PR-AUC under class imbalance. Feature importance analysis shows that textual signals, latent complaint topics, and company identity all contribute meaningful predictive information. In particular, company-level effects reveal systematic variation in complaint resolution patterns across financial institutions. These findings suggest that consumer complaint narratives can serve as alternative data for monitoring consumer harm, identifying firm-level operational weaknesses, and supporting early-stage risk surveillance in consumer finance.",
+      "date": "2026-06-21",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2606.22664",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.22664v1",
+      "landing_url": "http://arxiv.org/abs/2606.22664v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Zhuoer Wang",
+        "Sizhen Zhu",
+        "Xiongyu Chen"
+      ],
+      "scoring": {
+        "final_score": 0.1279,
+        "impact_score": 0.1383,
+        "relevance": 0.9,
+        "topic_points": 9.0,
+        "age_months": 1.2,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "tf-idf",
+          "imbalanc",
+          "class imbalance",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "SKDU at De-Factify 4.0: Natural Language Features for AI-Generated Text-Detection",
+      "abstract": "The rapid advancement of large language models (LLMs) has introduced new challenges in distinguishing human-written text from AI-generated content. In this work, we explored a pipelined approach for AI-generated text detection that includes a feature extraction step (i.e. prompt-based rewriting features inspired by RAIDAR and content-based features derived from the NELA toolkit) followed by a classification module. Comprehensive experiments were conducted on the Defactify4.0 dataset, evaluating two tasks: binary classification to differentiate human-written and AI-generated text, and multi-class classification to identify the specific generative model used to generate the input text. Our findings reveal that NELA features significantly outperform RAIDAR features in both tasks, demonstrating their ability to capture nuanced linguistic, stylistic, and content-based differences. Combining RAIDAR and NELA features provided minimal improvement, highlighting the redundancy introduced by less discriminative features. Among the classifiers tested, XGBoost emerged as the most effective, leveraging the rich feature sets to achieve high accuracy and generalisation.",
+      "date": "2025-03-28",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2503.22338",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.22338v1",
+      "landing_url": "http://arxiv.org/abs/2503.22338v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Shrikant Malviya",
+        "Pablo Arnau-Gonz\u00e1lez",
+        "Miguel Arevalillo-Herr\u00e1ez",
+        "Stamos Katsigiannis"
+      ],
+      "scoring": {
+        "final_score": 0.1279,
+        "impact_score": 0.1383,
+        "relevance": 0.9,
+        "topic_points": 9.0,
+        "age_months": 16.0,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "ai-generated text",
+          "text detection",
+          "natural language"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "large language model",
+          "llm"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Classifier Calibration at Scale: An Empirical Study of Model-Agnostic Post-Hoc Methods",
+      "abstract": "We study model-agnostic post-hoc calibration methods intended to improve probabilistic predictions in supervised binary classification on real i.i.d. tabular data, with particular emphasis on conformal and Venn-based approaches that provide distribution-free validity guarantees under exchangeability. We benchmark 21 widely used classifiers, including linear models, SVMs, tree ensembles (CatBoost, XGBoost, LightGBM), and modern tabular neural and foundation models, on binary tasks from the TabArena-v0.1 suite using randomized, stratified five-fold cross-validation with a held-out test fold. Five calibrators; Isotonic regression, Platt scaling, Beta calibration, Venn-Abers predictors, and Pearsonify are trained on a separate calibration split and applied to test predictions. Calibration is evaluated using proper scoring rules (log-loss and Brier score) and diagnostic measures (Spiegelhalter's Z, ECE, and ECI), alongside discrimination (AUC-ROC) and standard classification metrics. Across tasks and architectures, Venn-Abers predictors achieve the largest average reductions in log-loss, followed closely by Beta calibration, while Platt scaling exhibits weaker and less consistent effects. Beta calibration improves log-loss most frequently across tasks, whereas Venn-Abers displays fewer instances of extreme degradation and slightly more instances of extreme improvement. Importantly, we find that commonly used calibration procedures, most notably Platt scaling and isotonic regression, can systematically degrade proper scoring performance for strong modern tabular models. Overall classification performance is often preserved, but calibration effects vary substantially across datasets and architectures, and no method dominates uniformly. In expectation, all methods except Pearsonify slightly increase accuracy, but the effect is marginal, with the largest expected gain about 0.008%.",
+      "date": "2026-01-19",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2601.19944",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.19944v1",
+      "landing_url": "http://arxiv.org/abs/2601.19944v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Valery Manokhin",
+        "Daniel Gr\u00f8nhaug"
+      ],
+      "scoring": {
+        "final_score": 0.1124,
+        "impact_score": 0.1383,
+        "relevance": 0.75,
+        "topic_points": 7.5,
+        "age_months": 6.2,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular",
+          "ensemble",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "foundation model"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "QDSP: An Interpretable Structured Learning Framework for Predicting Death or Cerebral Palsy in Very Low Birth Weight Infants",
+      "abstract": "Very low birth weight infants (VLBWI) are at high risk of mortality and severe neurodevelopmental impairment, including cerebral palsy, yet reliable discharge-time prognostic stratification remains challenging in high-dimensional and data-limited clinical settings. To address this problem, we propose QDSP, an interpretable structured learning framework that integrates Quota-guided Subspace Sampling (QSS) and Differentiable-decision-guided Structure Perception (DSP). The QSS module constructs stability-aware and low-redundancy feature subspaces through bootstrap-based feature consistency estimation, whereas the DSP module employs differentiable soft oblique decision structures to model nonlinear clinical interactions while preserving traceable decision evidence. The proposed framework was evaluated on a real-world VLBWI cohort comprising 51 infants and further validated on three public medical tabular datasets. On the primary cohort, QDSP achieved an accuracy of 0.9200 and an AUC of 0.9714, outperforming representative machine learning and deep tabular learning baselines, including XGBoost, TabNet, and TabPFN. Across external datasets, QDSP maintained competitive discrimination and calibration under varying sample sizes and clinical distributions. In addition, SHAP-based analyses and differentiable decision-path tracing identified clinically relevant predictors, including cystic periventricular leukomalacia (cPVL) and birth weight, consistent with established neonatal pathophysiological evidence. These results suggest that QDSP provides an interpretable and robust framework for discharge-time risk stratification in VLBWI and may support early individualized clinical decision-making in neonatal intensive care settings.",
+      "date": "2026-05-29",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2606.07606",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.07606v1",
+      "landing_url": "http://arxiv.org/abs/2606.07606v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Ling Wang",
+        "Xiaolong Li",
+        "Hui Zhou",
+        "Jing Shi",
+        "Fuhao Zhang",
+        "Dapeng Chen",
+        "Nan Mu"
+      ],
+      "scoring": {
+        "final_score": 0.1072,
+        "impact_score": 0.1383,
+        "relevance": 0.7,
+        "topic_points": 7.0,
+        "age_months": 2.0,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular",
+          "shap",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "ASD-Bench: A Four-Axis Comprehensive Benchmark of AI Models for Autism Spectrum Disorder",
+      "abstract": "Automated ASD screening tools remain limited by single-architecture evaluations, axis-restricted assessment, and near-exclusive focus on adult cohorts, obscuring age-specific diagnostic patterns critical for early intervention. We introduce ASD-Bench, a systematic tabular benchmark evaluating ML, deep learning, and foundation model configurations across three age cohorts (children 1-11 yr, adolescents 12-16 yr, adults 17-64 yr) on four axes: predictive performance, calibration, interpretability, and adversarial robustness. Applied to a curated v3 dataset of 4,068 AQ-10 records, our benchmark spans classical models (XGBoost, AdaBoost, Random Forest, Logistic Regression), neural networks (MLP), deep tabular transformers (TabNet, TabTransformer, FT-Transformer), and TabPFN v2. We introduce the Heuristic Aggregate Penalty (HAP): a cost-sensitive metric penalising false negatives more heavily and incorporating cross-validation variance for deployment stability. Adult classification yields high performance (10/17 models achieve perfect F1 and AUC), while adolescents present a harder task (F1 ceiling 0.837 vs. 0.915 for children). Feature hierarchies shift across cohorts: A9 (social motivation) dominates for children, A5 (pattern recognition) leads for adolescents, and adults exhibit a flatter importance profile consistent with developmental social masking. Accuracy and calibration are dissociated: AdaBoost achieves F1=1.000 on adults with ECE=0.302, confirming single-metric evaluation is insufficient for clinical AI. Cohort-specific deployment recommendations are provided. All findings should be interpreted as proof-of-concept evidence on questionnaire-derived labels rather than clinically validated diagnostic performance.",
+      "date": "2026-05-11",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2605.11091",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.11091v1",
+      "landing_url": "http://arxiv.org/abs/2605.11091v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Shubhankit Singh",
+        "Hassan Shaikh",
+        "Kuldeep Raghuwanshi",
+        "Keshav Bulia"
+      ],
+      "scoring": {
+        "final_score": 0.1072,
+        "impact_score": 0.1383,
+        "relevance": 0.7,
+        "topic_points": 7.0,
+        "age_months": 2.6,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular",
+          "interpretab",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "deep learning",
+          "foundation model",
+          "neural network",
+          "transformer"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Symbolic Branch Networks: Tree-Inherited Neural Models for Interpretable Multiclass Classification",
+      "abstract": "Symbolic Branch Networks (SBNs) are neural models whose architecture is inherited directly from an ensemble of decision trees. Each root-to-parent-of-leaf decision path is mapped to a hidden neuron, and the matrices $W_{1}$ (feature-to-branch) and $W_{2}$ (branch-to-class) encode the symbolic structure of the ensemble. Because these matrices originate from the trees, SBNs preserve transparent feature relevance and branch-level semantics while enabling gradient-based learning. The primary contribution of this work is SBN, a semi-symbolic variant that preserves branch semantics by keeping $W_{2}$ fixed, while allowing $W_{1}$ to be refined through learning. This controlled relaxation improves predictive accuracy without altering the underlying symbolic structure. Across 28 multiclass tabular datasets from the OpenML CC-18 benchmark, SBN consistently matches or surpasses XGBoost while retaining human-interpretable branch attributions. We also analyze SBN*, a fully symbolic variant in which both $W_{1}$ and $W_{2}$ are frozen and only calibration layers are trained. Despite having no trainable symbolic parameters, SBN* achieves competitive performance on many benchmarks, highlighting the strength of tree-derived symbolic routing as an inductive bias. Overall, these results show that symbolic structure and neural optimization can be combined to achieve strong performance while maintaining stable and interpretable internal representations.",
+      "date": "2025-07-02",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2507.01781",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2507.01781v2",
+      "landing_url": "http://arxiv.org/abs/2507.01781v2",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Dalia Rodr\u00edguez-Salas"
+      ],
+      "scoring": {
+        "final_score": 0.1072,
+        "impact_score": 0.1383,
+        "relevance": 0.7,
+        "topic_points": 7.0,
+        "age_months": 12.8,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular",
+          "ensemble",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Trustworthy Tree-based Machine Learning by $MoS_2$ Flash-based Analog CAM with Inherent Soft Boundaries",
+      "abstract": "The rapid advancement of artificial intelligence has raised concerns regarding its trustworthiness, especially in terms of interpretability and robustness. Tree-based models like Random Forest and XGBoost excel in interpretability and accuracy for tabular data, but scaling them remains computationally expensive due to poor data locality and high data dependence. Previous efforts to accelerate these models with analog content addressable memory (CAM) have struggled, due to the fact that the difficult-to-implement sharp decision boundaries are highly susceptible to device variations, which leads to poor hardware performance and vulnerability to adversarial attacks. This work presents a novel hardware-software co-design approach using $MoS_2$ Flash-based analog CAM with inherent soft boundaries, enabling efficient inference with soft tree-based models. Our soft tree model inference experiments on $MoS_2$ analog CAM arrays show this method achieves exceptional robustness against device variation and adversarial attacks while achieving state-of-the-art accuracy. Specifically, our fabricated analog CAM arrays achieve $96\\%$ accuracy on Wisconsin Diagnostic Breast Cancer (WDBC) database, while maintaining decision explainability. Our experimentally calibrated model validated only a $0.6\\%$ accuracy drop on the MNIST dataset under $10\\%$ device threshold variation, compared to a $45.3\\%$ drop for traditional decision trees. This work paves the way for specialized hardware that enhances AI's trustworthiness and efficiency.",
+      "date": "2025-07-16",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2507.12384",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2507.12384v1",
+      "landing_url": "http://arxiv.org/abs/2507.12384v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Bo Wen",
+        "Guoyun Gao",
+        "Zhicheng Xu",
+        "Ruibin Mao",
+        "Xiaojuan Qi",
+        "X. Sharon Hu",
+        "Xunzhao Yin",
+        "Can Li"
+      ],
+      "scoring": {
+        "final_score": 0.102,
+        "impact_score": 0.1383,
+        "relevance": 0.65,
+        "topic_points": 6.5,
+        "age_months": 12.4,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular",
+          "interpretab",
+          "explainab"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Machine Learning for Predicting the Proton Structure Function $F_2^P$ in QCD",
+      "abstract": "We present a comparative study of four supervised machine learning regression algorithms -- Support Vector Regression (SVR), Gradient Boosting Regression (GBR), Gaussian Process Regression (GPR), and Multilayer Perceptron (MLP) -- for predicting the proton structure function $F_2^p(x, Q^2)$ using high-precision BCDMS experimental data. Unlike conventional methods that solve the DGLAP evolution equations, our data-driven framework directly captures the complex nonlinear dynamics of partonic structure. To ensure statistical robustness, we employ $k$-fold cross-validation and perform thorough hyperparameter optimization. Our results show that the MLP and GPR models achieve superior predictive accuracy. In particular, MLP exhibits the highest sensitivity to nonlinear gradients, while SVR proves most stable against experimental uncertainties. The close convergence of training and validation metrics confirms that the models learn the underlying QCD physics without overfitting to statistical fluctuations. This work highlights the potential of ML-based regression as a complementary tool for structure function analysis and kinematic extrapolation in high-energy physics.",
+      "date": "2026-06-04",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2606.06414",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.06414v1",
+      "landing_url": "http://arxiv.org/abs/2606.06414v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Shahin Atashbar Tehrani",
+        "Elham Astaraki",
+        "Fatemeh Arbabifar"
+      ],
+      "scoring": {
+        "final_score": 0.0968,
+        "impact_score": 0.1383,
+        "relevance": 0.6,
+        "topic_points": 6.0,
+        "age_months": 1.8,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "hyperparameter optimization",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "clear",
+        "neural_terms": [],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Harnessing Near-Infrared Spectroscopy and Machine Learning for Traceable Classification of Hanwoo and Holstein Beef",
+      "abstract": "This study evaluates the use of Near-Infrared spectroscopy (NIRS) combined with advanced machine learning (ML) techniques to differentiate Hanwoo beef (HNB) and Holstein beef (HLB) to address food authenticity, mislabeling, and adulteration. Rapid and non-invasive spectral data were attained by a portable NIRS, recording absorbance data within the wavelength range of 700 to 1100 nm. A total of 40 Longissimus lumborum samples, evenly split between HNB and HLB, were obtained from a local hypermarket. Data analysis using Principal Component Analysis (PCA) demonstrated distinct spectral patterns associated with chemical changes, clearly separating the two beef varieties and accounting for 93.72% of the total variance. ML models, including Linear Discriminant Analysis (LDA), Support Vector Machine (SVM), Logistic Regression (LR), Random Forest, Gradient Boosting (GB), K-Nearest Neighbors, Decision Tree (DT), Naive Bayes (NB), and Neural Networks (NN), were implemented, optimized through hyperparameter tuning, and validated by 5-fold cross-validation techniques to enhance model robustness and prevent overfitting. Random Forest provided the highest predictive accuracy with a Receiver Operating Characteristic (ROC) Area Under the Curve (AUC) of 0.8826, closely followed by the SVM model at 0.8747. Furthermore, GB and NN algorithms exhibited satisfactory performances, with cross-validation scores of 0.752. Notably, the NN model achieved the highest recall rate of 0.7804, highlighting its suitability in scenarios requiring heightened sensitivity. DT and NB exhibited comparatively lower predictive performance. The LR and SVM models emerged as optimal choices by effectively balancing high accuracy, precision, and recall. This study confirms that integrating NIRS with ML techniques offers a powerful and reliable method for meat authenticity, significantly contributing to detecting food fraud.",
+      "date": "2025-06-24",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2507.02903",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2507.02903v2",
+      "landing_url": "http://arxiv.org/abs/2507.02903v2",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "AMM Nurul Alam",
+        "Abdul Samad",
+        "AMM Shamsul Alam",
+        "Jahan Ara Monti",
+        "Ayesha Muazzam"
+      ],
+      "scoring": {
+        "final_score": 0.0968,
+        "impact_score": 0.1383,
+        "relevance": 0.6,
+        "topic_points": 6.0,
+        "age_months": 13.1,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "overfit",
+          "hyperparameter tuning",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Textual semantics and machine learning methods for data product pricing",
+      "abstract": "Reasonable pricing of data products enables data trading platforms to maximize revenue and foster the growth of the data trading market. The textual semantics of data products are vital for pricing and contain significant value that remains largely underexplored. Therefore, to investigate how textual features influence data product pricing, we employ five prevalent text representation techniques to encode the descriptive text of data products. And then, we employ six machine learning methods to predict data product prices, including linear regression, neural networks, decision trees, support vector machines, random forests, and XGBoost. Our empirical design consists of two tasks: a regression task that predicts the continuous price of data products, and a classification task that discretizes price into ordered categories. Furthermore, we conduct feature importance analysis by the mRMR feature selection method and SHAP-based interpretability techniques. Based on empirical data from the AWA Data Exchange, we find that for predicting continuous prices, Word2Vec text representations capturing semantic similarity yield superior performance. In contrast, for price-tier classification tasks, simpler representations that do not rely on semantic similarity, such as Bag-of-Words and TF-IDF, perform better. SHAP analysis reveals that semantic features related to healthcare and demographics tend to increase prices, whereas those associated with weather and environmental topics are linked to lower prices. This analytical framework significantly enhances the interpretability of pricing models.",
+      "date": "2025-11-27",
+      "year": 2025,
+      "doi": "",
+      "arxiv_id": "2511.22185",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2511.22185v2",
+      "landing_url": "http://arxiv.org/abs/2511.22185v2",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Ruize Gao",
+        "Feng Xiao",
+        "Jinpu Li",
+        "Shaoze Cui"
+      ],
+      "scoring": {
+        "final_score": 0.0916,
+        "impact_score": 0.1383,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 8.0,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "tf-idf",
+          "shap",
+          "feature selection",
+          "interpretab"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "neural network"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "FALCON-Discover: Discovering Concentrated False-Confidence Regions for Calibration",
+      "abstract": "Calibration is usually evaluated in aggregate, but the most dangerous failures are often local: predictions that remain highly confident despite being wrong. We study this failure mode as false-confidence concentration, the extent to which confident errors occupy compact, discoverable regions of prediction space. We introduce FALCON-Discover, a post-hoc, model-agnostic framework that ranks predictions using discrepancy signals from confidence, local support, neighborhood agreement, and perturbation stability. Across seven binary tabular datasets, four seeds, five-fold cross-fitting, and strong learners including XGBoost and CatBoost, we find that false-confidence concentration is recurrent but regime-dependent. At the main confidence threshold, discrepancy-based ranking substantially outperforms the strongest validation-selected calibration or trust-scoring baseline in the strongest regimes, while raw confidence recovers little dangerous-error mass. The best detector varies across datasets: learned discrepancy is strongest when multiple cues must be combined, whereas stability-centered ranking works best when local decisional fragility dominates. These results show that dangerous overconfidence is better treated as a family-level discovery problem than as a single-score calibration problem, and motivate calibration strategies that explicitly target regions where confidence, support, and stability diverge.",
+      "date": "2026-06-29",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2607.18278",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2607.18278v1",
+      "landing_url": "http://arxiv.org/abs/2607.18278v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Filippo Cenacchi",
+        "Longbing Cao",
+        "Runze Yang"
+      ],
+      "scoring": {
+        "final_score": 0.0916,
+        "impact_score": 0.1383,
+        "relevance": 0.55,
+        "topic_points": 5.5,
+        "age_months": 1.0,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "calibrat",
+          "tabular"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "recurrent"
+        ],
+        "family_in_title": false
+      }
+    },
+    {
+      "source": "arxiv",
+      "openalex_id": "",
+      "title": "Evaluating SAP RPT-1 for Enterprise Business Process Prediction: In-Context Learning vs. Traditional Machine Learning on Structured SAP Data",
+      "abstract": "Tabular foundation models aim to make machine learning accessible for enterprise data without task-specific training. This paper presents the first independent evaluation of SAP's Retrieval Pretrained Transformer (RPT-1) from a practitioner perspective. RPT-1 is a compact 64.6 MB model pretrained on 1.34 TB of structured data across 3.1 million tables. We benchmark it against tuned gradient-boosted decision trees (XGBoost, LightGBM, CatBoost) on three SAP business scenarios: demand forecasting across SD/MM/PP modules, predictive data integrity in BC/MM/QM, and financial risk classification in FI/CO/AR. Across five-fold cross-validation on datasets ranging from 2,500 to 3,200 rows, RPT-1 reaches 91-96% of tuned GBDT accuracy without any training examples. The classification gap is modest at 3.6-4.1 percentage points on AUC-ROC, though regression tasks show wider gaps of 8.9-11.1 percentage points on R-squared. An interesting finding is a crossover at roughly 75-100 context rows where RPT-1 actually outperforms XGBoost under limited data. Based on these results, we propose a practical hybrid workflow: use RPT-1 for rapid screening, then train GBDT selectively where prediction accuracy justifies the effort. All experiments are reproducible through publicly available Hugging Face Spaces.",
+      "date": "2026-02-22",
+      "year": 2026,
+      "doi": "",
+      "arxiv_id": "2602.19237",
+      "venue": "",
+      "type": "preprint",
+      "citations": 0,
+      "fwci": null,
+      "percentile": null,
+      "cited_by_pct_year": null,
+      "pdf_url": "https://arxiv.org/pdf/2602.19237v1",
+      "landing_url": "http://arxiv.org/abs/2602.19237v1",
+      "is_oa": true,
+      "is_retracted": false,
+      "is_paratext": false,
+      "n_refs": 0,
+      "authors": [
+        "Amit Lal"
+      ],
+      "scoring": {
+        "final_score": 0.0761,
+        "impact_score": 0.1383,
+        "relevance": 0.4,
+        "topic_points": 4.0,
+        "age_months": 5.1,
+        "citations_per_month": 0.0,
+        "components": {
+          "velocity": 0.0,
+          "citations": 0.0,
+          "venue": 0.1,
+          "access": 1.0
+        },
+        "topic_hits": [
+          "tabular",
+          "cross-validation"
+        ],
+        "application_domains": [],
+        "course_flag": "partial",
+        "neural_terms": [
+          "foundation model",
+          "transformer"
+        ],
+        "family_in_title": false
+      }
+    }
+  ]
+}
