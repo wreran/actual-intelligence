@@ -81,8 +81,14 @@ def load_competition(data_dir: str | None) -> tuple[pd.DataFrame, pd.DataFrame]:
     if data_dir:
         root = Path(data_dir)
     else:
-        import kagglehub
-        root = Path(kagglehub.competition_download("50-007-machine-learning-may-2026"))
+        # Prefer the repo's data/ dir; fall back to a Kaggle download.
+        local = Path(__file__).resolve().parents[1] / "data"
+        if (local / "train_features.csv").exists():
+            root = local
+        else:
+            import kagglehub
+            root = Path(kagglehub.competition_download(
+                "50-007-machine-learning-may-2026"))
     tr = pd.read_csv(root / "train_features.csv")
     te = pd.read_csv(root / "test_features.csv")
     print(f"[data] train_features {tr.shape} | test_features {te.shape}")
@@ -359,6 +365,35 @@ ZOO = {
     "compnb":   (build_nb,     space_nb,     False),
 }
 
+# Complexity ordering, simplest first. Used by the one-standard-error rule.
+#
+# The competition page states plainly: "You are expected to achieve a high
+# training F1 score, but low test F1 score ... DO NOT OVER-ENGINEER YOUR
+# SOLUTION." That is a declared train/test distribution shift arising from how
+# the GenAIDetect organisers sampled their data — the test set draws on
+# generators and domains the training set does not cover.
+#
+# Under that kind of shift the in-distribution winner is frequently NOT the
+# out-of-distribution winner: high-capacity boosters fit training-domain
+# idiosyncrasies that do not transfer, while linear models over TF-IDF and
+# ComplementNB degrade more gracefully. So model choice is deliberately biased
+# toward simplicity whenever the accuracy cost is within noise.
+COMPLEXITY = {"compnb": 0, "logreg": 1, "linsvc": 2,
+              "rforest": 3, "xgboost": 4, "lightgbm": 5}
+
+
+def bootstrap_se(y, pred, n_boot=1000, seed=SEED) -> float:
+    """Standard error of Macro-F1 by bootstrap — the noise floor for the
+    one-standard-error rule."""
+    rng = np.random.default_rng(seed)
+    y, pred = np.asarray(y), np.asarray(pred)
+    n = len(y)
+    stats = np.empty(n_boot)
+    for i in range(n_boot):
+        idx = rng.integers(0, n, n)
+        stats[i] = macro_f1(y[idx], pred[idx])
+    return float(stats.std(ddof=1))
+
 
 def fit_predict(name, model, X_tr, y_tr, X_va, y_va):
     """Fit with early stopping where supported, return validation probabilities."""
@@ -465,6 +500,11 @@ def main() -> int:
                     help="seeds to average for the final fit")
     ap.add_argument("--fast", action="store_true",
                     help="tiny run: 4 trials, 3 folds, 1 repeat, 2 seeds")
+    ap.add_argument("--select", choices=("one-se", "best"), default="one-se",
+                    help="'one-se' (default) picks the simplest model within "
+                         "one standard error of the best — the right choice "
+                         "given the competition's declared train/test shift. "
+                         "'best' takes the raw holdout winner.")
     ap.add_argument("--out-dir", default="output")
     args = ap.parse_args()
 
@@ -547,8 +587,27 @@ def main() -> int:
         print("  WARNING gap > 0.02 — the blend is fitting OOF noise. "
               "Reduce models or use uniform weights.")
 
+    # ---- one-standard-error rule -----------------------------------------
+    # Pick the SIMPLEST model whose holdout score is within 1 SE of the best,
+    # rather than the raw winner. Standard practice for model selection under
+    # noise, and the right default here given the declared train/test shift.
+    top = max(results, key=lambda r: r["holdout_macro_f1"])
+    top_pred = (hold_probs[top["model"]] >= tuned[top["model"]]["threshold"]
+                ).astype(int)
+    se = bootstrap_se(y_hold, top_pred)
+    within = [r for r in results
+              if r["holdout_macro_f1"] >= top["holdout_macro_f1"] - se]
+    simplest = min(within, key=lambda r: COMPLEXITY.get(r["model"], 99))
+    print(f"\n[1-SE ] best={top['model']} ({top['holdout_macro_f1']:.4f}), "
+          f"SE={se:.4f}, within-1SE={[r['model'] for r in within]}")
+    if args.select == "one-se" and simplest["model"] != top["model"]:
+        print(f"[1-SE ] choosing simpler '{simplest['model']}' "
+              f"({simplest['holdout_macro_f1']:.4f}) over '{top['model']}' — "
+              f"the gap is inside one standard error, and simpler models "
+              f"transfer better under the declared train/test shift")
+
     # ---- statistical validation of the blend-vs-best-single choice --------
-    best_single = max(results, key=lambda r: r["holdout_macro_f1"])
+    best_single = simplest if args.select == "one-se" else top
     bs_name = best_single["model"]
     pred_blend = (blend_hold >= blend_thr).astype(int)
     pred_single = (hold_probs[bs_name] >= tuned[bs_name]["threshold"]).astype(int)
@@ -726,6 +785,27 @@ def write_report(out, cmp_df, weights, blend_oof, blend_hold, gap, tuned, tag,
         "",
         "The CIs overlap far more than the point estimates suggest. Treat any "
         "gap smaller than the CI width as unproven.",
+        "",
+        "### Model selection rule",
+        "",
+        f"Selection mode: `{args.select}`. The one-standard-error rule picks "
+        "the **simplest** model whose holdout Macro-F1 is within one bootstrap "
+        "SE of the best, rather than the raw winner.",
+        "",
+        "This is deliberate. The competition page states: *\"You are expected "
+        "to achieve a high training F1 score, but low test F1 score ... DO NOT "
+        "OVER-ENGINEER YOUR SOLUTION.\"* That is a declared train/test "
+        "distribution shift from the GenAIDetect sampling design. Under shift "
+        "the in-distribution winner is often not the out-of-distribution "
+        "winner: high-capacity boosters fit training-domain quirks that do not "
+        "transfer, while linear models over TF-IDF degrade more gracefully. "
+        "Where the accuracy cost is inside noise, the simpler model is the "
+        "better bet.",
+        "",
+        "**Expect your public-leaderboard score to sit well below the holdout "
+        "number here.** That gap is designed into the dataset, not a bug in "
+        "this pipeline. Do not tune it away — chasing it is precisely the "
+        "over-engineering the organisers warn against.",
         "", "## Tuned hyperparameters", "",
     ]
     for name, d in tuned.items():

@@ -1,6 +1,28 @@
-ipykernel
-kagglehub
-kaggle
+# Core — needed for Tasks 1-3
+numpy
 pandas
 scikit-learn
+scipy
 matplotlib
+
+# Task 3 leaderboard models
+xgboost
+lightgbm
+optuna
+
+# Notebooks
+ipykernel
+
+# Kaggle data download (optional — you can also download the CSVs by hand
+# and drop them in data/)
+kagglehub
+kaggle
+
+# Optional extras
+# shap              # SHAP attribution for the report
+# nela_features     # original NELA vector, used by src/train_hybrid.py
+#
+# NOT required, and NOT permitted as a classifier under the Task 3 rule
+# "DO NOT use any deep learning approach (including LLMs)":
+# torch, transformers  — only reachable via src/features_surprisal.py,
+#                        which is research code kept out of the submission.

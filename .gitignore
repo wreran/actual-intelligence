@@ -1,8 +1,24 @@
 # Virtual environment
 .venv/
 __pycache__/
+*.pyc
+
+# Competition data — ~330 MB, redownload from Kaggle rather than commit.
+# See README.md for the layout the scripts expect.
+data/
+*.csv.zip
+train_features.csv
+test_features.csv
+train.csv
+test.csv
+sample_submission.csv
+
+# Run artifacts. Predictions that are actual deliverables live in
+# task*/outputs/ and are committed; scratch runs are not.
+output/
+runs/
+*.log
 
 # Downloaded paper PDFs — large binaries. Provenance is tracked in
 # papers/MANIFEST.md, which is committed; re-fetch with fetch_pdf.py.
 papers/pdf/
-
