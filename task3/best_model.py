@@ -778,7 +778,10 @@ def write_report(out, cmp_df, weights, blend_oof, blend_hold, gap, tuned, tag,
         f"- **Selected:** `{tag}`",
         f"- **Holdout Macro-F1:** **{blend_hold if tag == 'blend' else cmp_df.iloc[0]['holdout_macro_f1']:.4f}** "
         "(15% slice never seen by tuning, blending, or thresholding)",
-        f"- **Decision threshold:** {thr:.3f} (calibrated on OOF, not 0.5)",
+        f"- **Decision threshold:** {thr:.3f} "
+        + ("(the OOF sweep landed on the default 0.5 — calibration found no "
+           "gain here)" if abs(thr - 0.5) < 1e-9 else
+           "(calibrated on out-of-fold predictions, not left at the default 0.5)"),
         f"- **Predicted positive rate:** {pred.mean():.4f} "
         f"(training positive rate {y.mean():.4f})",
         "", "## Model comparison", "",
