@@ -4,6 +4,8 @@ Task 2: PCA + KNN
 sklearn IS allowed for this task.
 Requirement: report Macro-F1 for n_components in {2000, 1000, 500, 100}, KNN with n_neighbors=2.
 """
+import time
+
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
@@ -33,12 +35,24 @@ def load_data(train_features_path=DATA / "train_features.csv",
     y_train = train_raw[label_col].values
 
     id_cols = [c for c in X_train.columns if c.lower() in ("id", "index")]
-    if id_cols:
-        test_ids = X_test[id_cols[0]].values
-        X_train = X_train.drop(columns=id_cols)
-        X_test = X_test.drop(columns=id_cols)
-    else:
-        test_ids = np.arange(len(X_test))
+    test_ids = X_test[id_cols[0]].values if id_cols else np.arange(len(X_test))
+
+    # train_features.csv is [id, label, 0001..5000] — it carries the LABEL as
+    # well as the id. Dropping only the id columns leaves `label` sitting in X
+    # as a feature, which is target leakage: any model then scores ~1.0 on
+    # validation and collapses on the leaderboard. Here it surfaced as a shape
+    # mismatch (5001 train vs 5000 test features) only by luck.
+    #
+    # Take the feature columns as the intersection with the test set, which
+    # cannot contain the label by construction.
+    feature_cols = [c for c in X_train.columns
+                    if c in set(X_test.columns) and c not in id_cols]
+    dropped = [c for c in X_train.columns if c not in feature_cols and c not in id_cols]
+    if dropped:
+        print(f"  dropped non-feature columns from X: {dropped}")
+    X_train = X_train[feature_cols]
+    X_test = X_test[feature_cols]
+    print(f"  feature matrix: train {X_train.shape} test {X_test.shape}")
 
     y_test = None
     if test_labels_path is not None:
@@ -52,27 +66,43 @@ def load_data(train_features_path=DATA / "train_features.csv",
 
 def run_pca_knn_sweep(X_train, y_train, X_eval, y_eval, component_list=(2000, 1000, 500, 100), n_neighbors=2, seed=42):
     """
-    Returns dict {n_components: {"f1": macro_f1, "model": (pca, knn)}}.
-    If y_eval is None (true blind test set), this only fits/transforms; F1 must instead be
-    computed via the Kaggle leaderboard or a held-out validation split (recommended: use a
-    train/validation split from train_features.csv for this report table, since test.csv
-    labels are hidden in a real Kaggle competition).
+    Returns dict {n_components: {"f1": macro_f1, "pca": pca, "knn": knn, ...}}.
+
+    PCA is fitted ONCE at the largest requested component count, then sliced.
+    Principal components come out ordered by explained variance, so the first
+    n columns of a 2000-component projection are exactly the n-component
+    projection — fitting PCA separately per setting would repeat the same
+    expensive SVD four times for identical numbers.
+
+    Note on "on the test set": the Kaggle test labels are hidden, so Macro-F1
+    cannot be computed there directly. This sweep therefore scores a held-out
+    validation split carved from the training set, which is the standard
+    substitute. State that in the report.
     """
     results = {}
-    max_components = min(X_train.shape[0], X_train.shape[1])
-    for n_comp in component_list:
-        n_comp_eff = min(n_comp, max_components)
-        pca = PCA(n_components=n_comp_eff, random_state=seed)
-        X_train_pca = pca.fit_transform(X_train)
-        X_eval_pca = pca.transform(X_eval)
+    max_components = min(X_train.shape[0], X_train.shape[1], max(component_list))
+    print(f"Fitting PCA once at n_components={max_components} "
+          f"(then slicing for the smaller settings) ...")
+    t0 = time.time()
+    pca = PCA(n_components=max_components, random_state=seed)
+    X_train_full = pca.fit_transform(X_train)
+    X_eval_full = pca.transform(X_eval)
+    print(f"  PCA fitted in {time.time() - t0:.0f}s | "
+          f"total explained variance = {pca.explained_variance_ratio_.sum():.4f}")
 
+    for n_comp in component_list:
+        n_eff = min(n_comp, max_components)
+        t1 = time.time()
         knn = KNeighborsClassifier(n_neighbors=n_neighbors)
-        knn.fit(X_train_pca, y_train)
-        preds = knn.predict(X_eval_pca)
+        knn.fit(X_train_full[:, :n_eff], y_train)
+        preds = knn.predict(X_eval_full[:, :n_eff])
 
         f1 = f1_score(y_eval, preds, average="macro") if y_eval is not None else None
-        results[n_comp] = {"f1": f1, "pca": pca, "knn": knn, "explained_var": pca.explained_variance_ratio_.sum()}
-        print(f"n_components={n_comp_eff:5d} | Macro-F1={f1} | explained_var={results[n_comp]['explained_var']:.4f}")
+        ev = float(pca.explained_variance_ratio_[:n_eff].sum())
+        results[n_comp] = {"f1": f1, "pca": pca, "knn": knn, "n_eff": n_eff,
+                           "explained_var": ev}
+        print(f"n_components={n_eff:5d} | Macro-F1={f1:.4f} | "
+              f"explained_var={ev:.4f} | knn {time.time() - t1:.0f}s")
     return results
 
 
@@ -119,7 +149,10 @@ if __name__ == "__main__":
 
     best_n = max(results, key=lambda c: (results[c]["f1"] or -1))
     best_pca, best_knn = results[best_n]["pca"], results[best_n]["knn"]
-    X_test_pca = best_pca.transform(X_test)
+    # PCA was fitted once at the max component count; slice to the winner's
+    # width so the KNN sees the same dimensionality it was fitted on.
+    n_eff = results[best_n]["n_eff"]
+    X_test_pca = best_pca.transform(X_test)[:, :n_eff]
     test_preds = best_knn.predict(X_test_pca)
     pd.DataFrame({"id": test_ids, "label": test_preds}).to_csv(OUT / "PCA_KNN_predictions.csv", index=False)
     print(f"Saved PCA_KNN_predictions.csv using n_components={best_n}")

@@ -105,12 +105,21 @@ def load_data(train_features_path=DATA / "train_features.csv", test_features_pat
     y_train = train_raw[label_col].values
 
     id_cols = [c for c in X_train.columns if c.lower() in ("id", "index")]
-    if id_cols:
-        test_ids = X_test[id_cols[0]].values
-        X_train = X_train.drop(columns=id_cols)
-        X_test = X_test.drop(columns=id_cols)
-    else:
-        test_ids = np.arange(len(X_test))
+    test_ids = X_test[id_cols[0]].values if id_cols else np.arange(len(X_test))
+
+    # train_features.csv is [id, label, 0001..5000]: it carries the LABEL too.
+    # Dropping only the id columns would leave `label` in X as a feature —
+    # target leakage that produces a near-perfect validation score and a
+    # worthless model. Intersect with the test columns, which cannot contain
+    # the label by construction.
+    feature_cols = [c for c in X_train.columns
+                    if c in set(X_test.columns) and c not in id_cols]
+    dropped = [c for c in X_train.columns if c not in feature_cols and c not in id_cols]
+    if dropped:
+        print(f"  dropped non-feature columns from X: {dropped}")
+    X_train = X_train[feature_cols]
+    X_test = X_test[feature_cols]
+    print(f"  feature matrix: train {X_train.shape} test {X_test.shape}")
 
     return X_train.values.astype(np.float64), y_train.astype(np.float64), X_test.values.astype(np.float64), test_ids
 

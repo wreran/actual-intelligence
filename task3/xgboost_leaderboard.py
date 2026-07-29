@@ -150,9 +150,19 @@ def load_and_build_features(train_features_path=DATA / "train_features.csv",
 
     id_cols = [c for c in X_train_feat.columns if c.lower() in ("id", "index")]
     test_ids = X_test_feat[id_cols[0]].values if id_cols else np.arange(len(X_test_feat))
-    if id_cols:
-        X_train_feat = X_train_feat.drop(columns=id_cols)
-        X_test_feat = X_test_feat.drop(columns=id_cols)
+
+    # train_features.csv is [id, label, 0001..5000]: it carries the LABEL too.
+    # Dropping only the id columns would leave `label` in X as a feature —
+    # target leakage. Intersect with the test columns, which cannot contain
+    # the label by construction.
+    feature_cols = [c for c in X_train_feat.columns
+                    if c in set(X_test_feat.columns) and c not in id_cols]
+    dropped = [c for c in X_train_feat.columns
+               if c not in feature_cols and c not in id_cols]
+    if dropped:
+        print(f"  dropped non-feature columns from X: {dropped}")
+    X_train_feat = X_train_feat[feature_cols]
+    X_test_feat = X_test_feat[feature_cols]
 
     train_style = build_stylometric_matrix(train_raw[text_col])
     test_style = build_stylometric_matrix(test_raw[text_col])
